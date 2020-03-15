@@ -95,6 +95,10 @@ publish class helloworld{
 1. 123
    1. 134
 
+上标和下标用<sup>[内容]</sup> 下标<sub>[内容]</sub>
+
+
+
 
 
 
