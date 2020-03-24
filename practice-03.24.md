@@ -108,4 +108,5 @@ AND      0001 1100
 
 ​    16个数据寄存器 需要4bit 所以最少需要占用18位空间。
 
-![]()
+![](https://github.com/Sunxiao1995/learn/blob/master/photo/13.jpeg)
+
