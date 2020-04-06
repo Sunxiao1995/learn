@@ -27,3 +27,35 @@ void hannuota(int x, char A, char B, char C)
     }
     return 0;
 }
+
+/*
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+int* constructArray(int n, int k, int* returnSize){
+    int * arrange = malloc(n * sizeof(int));
+    memset(arrange, 0, n * sizeof(int));
+    if(k == 1){
+        for(int i = 0;i < n;i++){
+            arrange[i] = i + 1;
+        }
+    }else{
+        for(int i = 0;i < n - k;i++)
+        {
+            arrange[i] = i + 1;
+        }
+        
+        arrange[n - k] = n;
+        int m = -1;
+        for(int i = n - k + 1; i < n; i++){
+            arrange[i] = arrange[i - 1] + m * (n - i);
+            m = -m;
+        }
+        
+    }
+    *returnSize = n;
+    return arrange;
+}
+
+*/
