@@ -156,7 +156,7 @@ int main(void){
 
 第五题
 
-```
+```c
 Queue* enqueue(Queue* queue, int data){
     Stack* stack_temp = init_stack();
     while(!is_empty(queue)){
@@ -193,7 +193,7 @@ int dequeue(Queue* queue){
 
 此时在递归函数最里面 pop的值是2
 
-把栈清空 依次出递归函数
+把栈清空 依次进栈出递归函数
 
 
 
