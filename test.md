@@ -164,7 +164,9 @@ Queue* enqueue(Queue* queue, int data){
         if(push(stack_temp, i))
             continue;
     }
-    if(push(queue, data)){}
+    if(push(queue, data)){
+      
+    }
     while(!is_empty(stack_temp)){
         if(push(queue, pop(stack_temp))){
             continue;
@@ -194,6 +196,33 @@ int dequeue(Queue* queue){
 此时在递归函数最里面 pop的值是2
 
 把栈清空 依次进栈出递归函数
+
+```
+Queue* enqueue(Queue* queue, int data){
+    push(queue,data);
+    return queue;
+}
+
+int dequeue(Queue* queue){
+    int i = 0;
+    static int j;
+    if (queue->next->next == NULL)
+    {
+        j = top(queue);
+        free_stack(queue);
+        return j;
+    }
+    i = pop(queue);
+    if(queue->next->next != NULL)
+        dequeue(queue);
+    else{
+        j = pop(queue);
+        }
+        enqueue(queue,i);
+
+    return  j;
+}
+```
 
 
 
