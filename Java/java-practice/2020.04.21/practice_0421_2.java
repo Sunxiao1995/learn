@@ -60,14 +60,17 @@ static void sort(int arr[]) {
 */
 public static void main(String[] args) {
 	int[] a = {13,26,-3,4,54,26,37,18,69,-10};
-	
+	System.out.println("打印升序的数组");
     sort(a);
     for(int i = 0;i<a.length;i++){
         System.out.print("["+i+"]"+"="+a[i]+" ");
         if ((i+1)%5 == 0)           //每5个输出一个换行符
             System.out.println();
     }
-    sort(a,false);
+    System.out.println("请输入升序:true 降序:false");
+    java.util.Scanner sc = new java.util.Scanner(System.in);
+    boolean isAsc = sc.nextBoolean();
+    sort(a,isAsc);
     for(int i = 0;i<a.length;i++){
         System.out.print("["+i+"]"+"="+a[i]+" ");
         if ((i+1)%5 == 0)           //每5个输出一个换行符
