@@ -7,22 +7,27 @@
        a[++i] = staff;
        System.out.print(i);
 	}
-
+    /**
+    *
+    *
+    */
 	void delete(String name){  //删除的函数
 		for( ;j <= i;j++){
 			if(this.a[j].name.equals(name)){
-               { System.out.print(j);
+                System.out.print(j);
                	for(;j < i;j++){
                   a[j] = a[j+1];	
                    a[i] = null;
-                     }
-                     i--;
-                     j = 0;
-                   }
+                }
+                i--;
+                System.out.print(i);
+                break;
+                
 				
 			
 			}
 		}
+        j=0;
     }
     
 	
@@ -109,6 +114,7 @@
         jewelry.add(d);
         //jewelry.salary("a");
         jewelry.delete("d");
+        
         jewelry.sum_salary();
 
 	}
