@@ -19,5 +19,5 @@ javac -d out club/banyuan/animal/*.java club/banyuan/machine/*.java club/banyuan
 
 ![](https://github.com/Sunxiao1995/learn/blob/master/photo/20.png)
 
- ![](https://github.com/Sunxiao1995/learn/blob/master/photo/21.png)
+![](https://github.com/Sunxiao1995/learn/blob/master/photo/21.png)
 
