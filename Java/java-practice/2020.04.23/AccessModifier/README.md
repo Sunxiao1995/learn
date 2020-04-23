@@ -4,7 +4,7 @@
 javac -d ../out club/banyuan/Main.java
 ```
 
-![](/Users/sunxiao/Desktop/截屏2020-04-23 下午4.59.49.png)
+![](https://github.com/Sunxiao1995/learn/blob/master/photo/16.png)
 
 在out路径下
 
@@ -12,5 +12,5 @@ javac -d ../out club/banyuan/Main.java
 java club/banyuan/Main
 ```
 
-![](/Users/sunxiao/Desktop/截屏2020-04-23 下午5.01.53.png)
+![](https://github.com/Sunxiao1995/learn/blob/master/photo/17.png)
 
