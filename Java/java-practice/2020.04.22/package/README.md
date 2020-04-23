@@ -3,11 +3,11 @@
 javac -d out club/banyuan/test/*.java club/banyuan/listpkg/*.java club/banyuan/util/*.java
 ```
 
-![](/Users/sunxiao/Desktop/截屏2020-04-23 下午5.14.29.png)
+![](https://github.com/Sunxiao1995/learn/blob/master/photo/18.png)
 
 
 
-![](/Users/sunxiao/Desktop/截屏2020-04-23 下午5.16.10.png)
+![](https://github.com/Sunxiao1995/learn/blob/master/photo/19.png)
 
 
 
@@ -17,7 +17,7 @@ javac -d out club/banyuan/test/*.java club/banyuan/listpkg/*.java club/banyuan/u
 javac -d out club/banyuan/animal/*.java club/banyuan/machine/*.java club/banyuan/main/*.java
 ```
 
-![](/Users/sunxiao/Desktop/截屏2020-04-23 下午5.30.42.png)
+![](https://github.com/Sunxiao1995/learn/blob/master/photo/20.png)
 
- ![](/Users/sunxiao/Desktop/截屏2020-04-23 下午6.27.27.png)
+ ![](https://github.com/Sunxiao1995/learn/blob/master/photo/21.png)
 
