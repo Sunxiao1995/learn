@@ -1,4 +1,4 @@
-package Reverse;
+package reverse;
 import java.util.Scanner;
 
 public class Main{

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2d5abfee-bada-465f-8068-a51ae3a0688a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../important.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2020.04.24/CommonClass/src/randomTest/randomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/2020.04.24/CommonClass/src/randomTest/randomTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2020.04.24/CommonClass/src/reverse/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/2020.04.24/CommonClass/src/reverse/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2020.04.24/CommonClass/src/reverse/Reverse.java" beforeDir="false" afterPath="$PROJECT_DIR$/2020.04.24/CommonClass/src/reverse/Reverse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2020.04.24/ObjectConstruction/src/club/banyuan/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/2020.04.24/ObjectConstruction/src/club/banyuan/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2020.04.24/Static/practice/src/club/banyuan/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/2020.04.24/Static/practice/src/club/banyuan/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jetbrains-agent.jar" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1b9nw29HaFcLS8v7gSAgOvfQn37" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="club.banyuan.Main" />
+      <module name="java-practice" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d5abfee-bada-465f-8068-a51ae3a0688a" name="Default Changelist" comment="" />
+      <created>1588053411961</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588053411961</updated>
+      <workItem from="1588053413196" duration="218000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

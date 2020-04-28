@@ -7,7 +7,7 @@ static private int i;
 
 public static int randomInt(int from,int to){
 	
-    //根据输入的值判断区间
+    //根据输入的值判断区间     //正常输入错误不让进行下一步
 	if(from > to){
 		int temp = from;
 		from = to;

@@ -4,7 +4,7 @@ public class Person {
 
   private String name;
   private int age;
-  static int count1 = 0;
+  static int count1 = 0;   //参数命名需要直观。personObjwithNAmeAndAgeCount
   static int count2 = 0; 
   static int count3 = 0;
   
