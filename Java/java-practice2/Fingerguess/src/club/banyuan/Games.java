@@ -46,7 +46,10 @@ public class Games{
         }
     }
    public void judgeGame(int peopleCount){
+// 比较 如果有三种出拳方式，直接return
+       //
 
+       //equals 前后对调问题
 
    }
 
