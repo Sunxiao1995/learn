@@ -28,8 +28,7 @@ class MainClass
         a.myMethod();
     }
 }
-父类方法重写接口方法，子类直接调用父类方法
-my Method
+c继承b的方法 调用时会
 ```
 #### 2.
 ```
@@ -80,6 +79,7 @@ class B implements A
     {
         i = 222;
     }
+    }
 ```
 
 #### 4.以下内容是否编译通过，如果不能请指出错误原因
@@ -93,7 +93,7 @@ interface B extends A
 {
     //Interface B extending Class A
 }
-//编译报错，接口只能继承接口
+//编译报错，接口只能继承接口,不能继承类和抽象类
 ```
 #### 5.
 ```
@@ -137,6 +137,7 @@ public class MainClass
 }
 QQQQPPPP
 PPPPQQQQ
+类实现接口 用接口接受子类 使用变量名可以访问成员变量 static 方法不能通过对象来访问。
 ```
 #### 6.
 ```
@@ -164,7 +165,7 @@ public class MainClass
 }
 
 A实现了接口B重写了方法 使用接口b来接收a的实例调用的方法实际上a里的方法‘
-i*i = 4 先给i 赋值 在相加
+i*i = 4 先给i 赋值 在正负
 ```
 
 ####  7.以下内容是否编译通过，如果不能请指出错误原因
@@ -181,6 +182,14 @@ interface A
     }
 }
 接口没有构造方法也无法实例化 所以不能有代码块，会编译报错
+
+接口中只允许有
+static方法
+private方法
+成员变量
+default方法
+abstract方法
+不允许有构造方法 代码块 
 ```
 ####  8.以下内容是否编译通过，如果不能请指出错误原因
 ```
@@ -236,6 +245,7 @@ public class MainClass
 		abc.methodOne();
 	}
 }
+
 反复调用这个两个方法，方法一会调用父类里的，紧接着调用子类里重写的方法2
 ```
 #### 10.
@@ -343,6 +353,8 @@ public class MainClass
 NOT FINALFINAL
 FINAL
 接口中定义的成员默认是`public static final`的
+如果有one two 两个接口有默认实现 则要求子类必须重写方法
+
 ```
 #### 14.
 ```
@@ -542,6 +554,7 @@ class Z implements Y
         System.out.println("Method Y");
     }
 }
+要求重写方法，因为y继承x
 ```
 #### 19.
 ```
@@ -633,5 +646,8 @@ public class MainClass
         m.method(new C());
     }
 }
-2 3  3  依次向上转型
+如果重载的两个方法中入参存在父子关系，那么当传入子类对象时，调用与子类关系近的
+如果没有父子关系，则会编译报错
+
 ```
+

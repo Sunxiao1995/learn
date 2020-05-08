@@ -20,7 +20,7 @@ public class Commission extends Hourly {
         this.commissionRate = commissionRate;
         totalSales = 0;
     }
-
+    @Override
     public void addSales(double totalSales){
         this.totalSales += totalSales;
     }
