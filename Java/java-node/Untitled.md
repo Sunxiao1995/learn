@@ -32,6 +32,12 @@ default	修饰接口的方法
 
 
 
+hash map
+
+
+
+
+
 
 
 
