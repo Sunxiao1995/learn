@@ -24,6 +24,7 @@ public class DataSet {
     count++;
   }
 
+
   public double getAverage() {
     if(count == 0){
       System.out.println("没有数据");
