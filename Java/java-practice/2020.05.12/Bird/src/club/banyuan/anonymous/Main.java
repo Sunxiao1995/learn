@@ -10,11 +10,8 @@ public class Main {
 
     show(new Bird() {
       //TODO
-      String name = "燕子";
-
-      @Override
-      public String getName() {
-        return this.name;
+      {
+        setName("燕子");
       }
 
       @Override

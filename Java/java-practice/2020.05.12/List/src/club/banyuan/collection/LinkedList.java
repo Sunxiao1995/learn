@@ -8,7 +8,7 @@ public class LinkedList implements List {
 
     private Object data;
 
-    private club.banyuan.collection.LinkedList.Node next;
+    private club.banyuan.collection.LinkedList.Node next; //因为外部有一个同名的类 所以这里需要写全称
 
     private club.banyuan.collection.LinkedList.Node prev;
 
