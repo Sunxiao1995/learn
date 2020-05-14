@@ -120,7 +120,7 @@ public class Calculator {
     catch (QuitException e) {
       System.out.println("Quitting\nThanks!");
 
-      System.exit(0);
+      return true;
 
       // TODO: complete implementation.
     } catch (IllegalInputException e) {
@@ -129,7 +129,7 @@ public class Calculator {
     }
     catch (CalculatorException e) {
       // 这捕获了剩下的CalculatorException情况：DivideByZeroException
-      System.out.println("DivideByZeroException : ");
+      System.out.println("Tried to divide by zero");
       // TODO: complete implementation.
     }
     // TODO: complete implementation.

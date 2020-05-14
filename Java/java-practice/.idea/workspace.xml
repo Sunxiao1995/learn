@@ -19,12 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d5abfee-bada-465f-8068-a51ae3a0688a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../java-practice2/test2/out/production/test2/Outer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-practice2/test2/out/production/test2/OuterInterface$InnerInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-practice2/test2/out/production/test2/OuterInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-practice2/test2/src/club/banyuan/OuterClass.java" beforeDir="false" />
-    </list>
+    <list default="true" id="2d5abfee-bada-465f-8068-a51ae3a0688a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +64,7 @@
       <updated>1588053411961</updated>
       <workItem from="1588053413196" duration="218000" />
       <workItem from="1589290830768" duration="10000" />
+      <workItem from="1589463679175" duration="2000" />
     </task>
     <servers />
   </component>
