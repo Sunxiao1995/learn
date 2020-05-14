@@ -16,27 +16,25 @@ public enum Weekday {
         this.isHoliday = isHoliday;
     }
 
-    public String getWeekday() {
+    public String getWeekday()   {
         return weekday;
     }
 
-    public static boolean isHoliday(String weekday) {
-        for (Weekday temp:Weekday.values()) {
-            if(temp.weekday.equals(weekday)){
-                return temp.isHoliday;
-            }
-        }
-        System.out.println("输入不合法");
-        return false;
+    public boolean isHoliday() {
+                return isHoliday;
+
     }
 
-    public static boolean isWeekday(String weekday){
-        return !isHoliday(weekday);
+    public boolean isWeekday(){
+        return isHoliday;
     }
 
 
     @Override
     public String toString() {
+
         return this.weekday;
     }
+
+
 }
