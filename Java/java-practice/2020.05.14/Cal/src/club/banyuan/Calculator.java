@@ -146,8 +146,12 @@ public class Calculator {
     // 未指定退出
     return false;
   }
-
-  //
+  /**
+   * 判断字符串是否是数字字符串
+   *
+   * @param str 传入的字符串
+   * @return 返回结果
+   */
 
   public static boolean isInteger(String str) {
     Pattern pattern = Pattern.compile("^[-\\+]?[\\d]*$");
