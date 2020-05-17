@@ -1,5 +1,7 @@
 package club.banyuan;
 
+import org.junit.Test;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -32,10 +34,14 @@ public class Driver {
                 // 指定程序退出
                 break;
             }
-
         }
 
         // 关闭缓冲的读取器
         br.close();
     }
+    @Test
+    public void test(){
+        
+    }
+
 }
