@@ -2,6 +2,9 @@ package club.banyuan;
 
 public enum Product {
 
+    /**
+     * 声明五个产品 构造时分别初始化价格 产品名 产品数量 以及在机器中的位置
+     */
 
     FIRST_PRODUCT(10,"Juice",10,"A"),
     SECOND_PRODUCT(6,"Cola",10,"B"),
@@ -46,10 +49,20 @@ public enum Product {
         return ID;
     }
 
+    /**
+     * 每次用户购买产品后 调用此方法 产品数量减一 并且不为负
+     */
     public void setProductCount() {
 
          productCount--;
+         if(productCount < 0){
+             productCount = 0;
+         }
     }
+
+    /**
+     * 重新装填产品
+     */
     public void filledProduct(){
          productCount = 10;
     }

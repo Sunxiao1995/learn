@@ -12,6 +12,9 @@ public class ServiceMenu implements MachineMenu{
         System.out.print("Enter access code: ");
     }
 
+    /**
+     * 密码正确才能进入管理员界面
+     */
     @Override
     public void executeYouChoose() {
         Scanner sc = new Scanner(System.in);

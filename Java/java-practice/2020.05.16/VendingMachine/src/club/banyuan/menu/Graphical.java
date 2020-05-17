@@ -6,6 +6,10 @@ import club.banyuan.Product;
 
 public class Graphical implements MachineMenu{
     @Override
+
+    /**
+     * 打印图形界面
+     */
     public void printCurrentMenu() {
         System.out.print("\n"+
                 "*---------------------------*\n" +
@@ -30,16 +34,23 @@ public class Graphical implements MachineMenu{
     }
 
     @Override
+    /**
+     * 图形界面展示完会当即进入主菜单
+     */
     public void executeYouChoose() {
         MachineMenuBuild.setChangeMenu(MachineMenuBuild.ROOT_MENU);
 
     }
 
-
+    /**
+     * 根据当前产品的数量 判断当前的亮灯情况
+     * @param product 当前产品
+     * @return 如果钱不够 不作出反应 缺货显示X 有货钱够显示O
+     */
     public String returnUserPurchasingPower(Product product){
         if(Machine.getUserRemainingMoney() < product.getProductPrice()){
             return " ";
-        } else if(product.getProductCount() < 0){
+        } else if(product.getProductCount() <= 0){
             return "X";
         }else{
             return "O";

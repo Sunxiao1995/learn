@@ -16,6 +16,10 @@ public class RefillProduct implements MachineMenu{
 
     }
 
+    /**
+     * 根据选择填充产品 每次填充数量变为10
+     * @param choose
+     */
     @Override
     public void executeYouChoose(String choose) {
         if (!"0".equals(choose)) {

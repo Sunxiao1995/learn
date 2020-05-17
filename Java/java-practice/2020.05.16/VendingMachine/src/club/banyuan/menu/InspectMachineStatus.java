@@ -5,6 +5,9 @@ import club.banyuan.MachineMenuBuild;
 import club.banyuan.Product;
 
 public class InspectMachineStatus implements MachineMenu{
+    /**
+     * 展示机器当前赚取的钱 以及产品数量 用户未取出的钱等信息
+     */
     @Override
     public void printCurrentMenu() {
         System.out.println("(9-1) Machine status");

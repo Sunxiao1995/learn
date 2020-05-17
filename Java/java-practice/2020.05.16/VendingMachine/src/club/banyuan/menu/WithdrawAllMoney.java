@@ -11,6 +11,9 @@ public class WithdrawAllMoney implements MachineMenu{
         System.out.println("$" + Machine.getMachineRevenue()+" is withdrawn.\n");
     }
 
+    /**
+     * 机器取出所有的钱
+     */
     @Override
     public void executeYouChoose() {
         Machine.returnTheBalance();

@@ -4,6 +4,9 @@ import club.banyuan.MachineMenuBuild;
 import club.banyuan.Product;
 
 public class ReadProductInformation implements MachineMenu{
+    /**
+     * 读取产品的信息
+     */
     @Override
     public void printCurrentMenu() {
         System.out.println("A. "+ Product.FIRST_PRODUCT.getProductName()+"  ($"+Product.FIRST_PRODUCT.getProductPrice()+")\n"+

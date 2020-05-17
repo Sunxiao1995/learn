@@ -16,13 +16,17 @@ public class PressProductButton implements MachineMenu{
                 " 0. Go back");
     }
 
-    @Override
-    public void executeYouChoose() {
-
-    }
-
+    /**
+     * 买东西 如果售空 显示Products to sell out
+     * 如果钱不够显示 "invalid choice"
+     * 执行成功后 机器赚取的钱 产品的数量 用户的余额等等会作出相应的动作
+     * @param choose
+     */
     @Override
     public void executeYouChoose(String choose) {
+        MachineMenu.isInputLegalOrNot(choose);
+        if("9".equals(choose))
+        {throw new IllegalArgumentException();}
         switch (choose){
             case "1":
             case "2":

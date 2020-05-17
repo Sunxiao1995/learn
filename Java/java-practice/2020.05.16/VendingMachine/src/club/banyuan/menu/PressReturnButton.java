@@ -11,6 +11,9 @@ public class PressReturnButton implements MachineMenu {
 
     }
 
+    /**
+     * 用户退款 余额变成0 且最后一个被卖出的商品初始化
+     */
     @Override
     public void executeYouChoose() {
         Machine.returnTheBalance();

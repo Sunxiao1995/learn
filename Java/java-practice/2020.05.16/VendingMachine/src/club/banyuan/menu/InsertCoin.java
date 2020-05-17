@@ -15,12 +15,13 @@ public class InsertCoin implements MachineMenu{
     }
 
     @Override
-    public void executeYouChoose() {
-
-    }
-
-    @Override
+    /**
+     * 加钱 0返回上一级
+     */
     public void executeYouChoose(String choose) {
+        MachineMenu.isInputLegalOrNot(choose);
+        if("5".equals(choose) || "9".equals(choose))
+        {throw new IllegalArgumentException();}
         switch(choose){
             case "1":
             case "2":
@@ -39,6 +40,12 @@ public class InsertCoin implements MachineMenu{
         }
     }
 
+
+    /**
+     * 根据对应的选择 返回每次应该添加的钱
+     * @param choose
+     * @return
+     */
     private String insertMoneyAccordingChoose(String choose){
         switch (choose){
             case "1":
@@ -50,6 +57,6 @@ public class InsertCoin implements MachineMenu{
             case "4":
                 return "10";
         }
-        return null;
+        return "0";
     }
 }

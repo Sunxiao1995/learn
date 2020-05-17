@@ -18,6 +18,9 @@ public class OpenServiceMenu implements MachineMenu {
 
     @Override
     public void executeYouChoose(String choose) {
+        MachineMenu.isInputLegalOrNot(choose);
+        if("5".equals(choose) || "9".equals(choose))
+        {throw new IllegalArgumentException();}
         String childChoose = "9-"+choose;
         for (MachineMenuBuild chooseMenu : MachineMenuBuild.values()) {
             if (childChoose.equals(chooseMenu.getID())) {

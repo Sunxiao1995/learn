@@ -1,13 +1,10 @@
 package club.banyuan;
 
-
-
-import static club.banyuan.Machine.useMachine;
-
 public class Test {
+    //测试 启动机器
     public static void main(String[] args) {
 
-        useMachine();
+        Machine.useMachine();
 
     }
 
