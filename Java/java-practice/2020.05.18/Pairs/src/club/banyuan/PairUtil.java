@@ -7,15 +7,15 @@ public class PairUtil {
         return a;
     }
 
-    public static  <T extends Measurable> Pair<T> minmax(T[] array){
-        T min = array[0];
-        T max = array[0];
-        for(T minElem : array){
+    public static  <T extends Measurable> Pair<Measurable> minmax(T[] array){
+        Measurable min = array[0];
+        Measurable max = array[0];
+        for(Measurable minElem : array){
             if(minElem.getMeasure() < min.getMeasure()){
                 min = minElem;
             }
         }
-        for (T maxElem : array){
+        for (Measurable maxElem : array){
             if(maxElem.getMeasure() > max.getMeasure()){
                 max = maxElem;
             }

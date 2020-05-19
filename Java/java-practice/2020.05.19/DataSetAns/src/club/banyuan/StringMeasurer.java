@@ -7,6 +7,6 @@ public class StringMeasurer implements Measurer<String> {
     if (anObject == null) {
       return 0;
     }
-      return anObject.length();
+    return anObject.length();
   }
 }

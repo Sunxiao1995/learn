@@ -46,8 +46,8 @@ public class PointUtils {
         averageX += temp.getX();
         averageY += temp.getY();
       }
-      Point newPoint = new Point(averageX/i,averageY/i);
-      return newPoint;
+      return new Point(averageX / i, averageY / i);
+      
     }
     return null;
   }
