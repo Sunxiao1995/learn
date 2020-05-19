@@ -7,9 +7,6 @@ public class DataSet<T> {
   private T maximum;
   private Measurer<T> measurer;
 
-  public DataSet() {
-  }
-
   public DataSet(Measurer<T> aMeasurer) {
     sum = 0;
     count = 0;
@@ -18,25 +15,9 @@ public class DataSet<T> {
   }
 
   public void add(T x) {
-    if (x instanceof Measurable) {
-      add((Measurable) x);
-    } else {
-      addByMeasurer(x);
-    }
-  }
-
-  private void addByMeasurer(T x) {
     sum = sum + measurer.measure(x);
     if (count == 0 || measurer.measure(maximum) < measurer.measure(x)) {
       maximum = x;
-    }
-    count++;
-  }
-
-  private void add(Measurable measurable) {
-    sum = sum + measurable.getMeasure();
-    if (count == 0 || ((Measurable) maximum).getMeasure() < measurable.getMeasure()) {
-      maximum = (T) measurable;
     }
     count++;
   }

@@ -8,6 +8,7 @@ public class Country implements Measurable {
     this.population = population;
   }
 
+
   public int getPopulation() {
     return population;
   }

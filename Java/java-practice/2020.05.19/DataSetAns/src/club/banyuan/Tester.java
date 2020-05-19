@@ -3,16 +3,18 @@ package club.banyuan;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 public class Tester {
 
   @Test
   public void countryTest() {
-    DataSet<Country> countryData = new DataSet<>();
-    countryData.add(new Country(19920));
-    countryData.add(new Country(20000));
-    countryData.add(new Country(45000));
-    countryData.add(new Country(1100));
-    Assert.assertEquals("最大人口数量", 45000, countryData.getMaximum().getMeasure(), 0);
+    DataSet<Country> date = new DataSet<>(new MeasurableMeasurer<>());
+    date.add(new Country(19920));
+    date.add(new Country(20000));
+    date.add(new Country(45000));
+    date.add(new Country(1110));
+    Assert.assertEquals("最大人口数量", 45000, date.getMaximum().getMeasure(), 0);
   }
 
   @Test
@@ -46,12 +48,13 @@ public class Tester {
     if (Math.abs(b - a) > 0.0000001) {
 
     }
-    DataSet<Distance> distanceDataSet = new DataSet<>();
-    distanceDataSet.add(new Distance(1000));
-    distanceDataSet.add(new Distance(2000));
-    distanceDataSet.add(new Distance(3000));
-    distanceDataSet.add(new Distance(4000));
-    Assert.assertEquals("平均距离：", 2500, distanceDataSet.getAverage(), 0);
-    Assert.assertEquals("最长距离：", 4000, distanceDataSet.getMaximum().getMeasure(), 0);
+
+    DataSet<Distance> date = new DataSet<>(new MeasurableMeasurer<>());
+    date.add(new Distance(1000));
+    date.add(new Distance(2000));
+    date.add(new Distance(3000));
+    date.add(new Distance(4000));
+    Assert.assertEquals("平均距离：", 2500, date.getAverage(), 0);
+    Assert.assertEquals("最长距离：", 4000, date.getMaximum().getMeasure(), 0);
   }
 }
