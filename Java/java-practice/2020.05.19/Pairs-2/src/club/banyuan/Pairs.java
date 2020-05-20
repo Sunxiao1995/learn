@@ -42,7 +42,7 @@ public class Pairs<K, V> implements Iterable<Pair<K, V>> {
    */
   private class PairIterator implements Iterator<Pair<K, V>> {
       private int next = 0;
-      private int prev =-1;
+      private int current =-1;
 
 
     @Override
@@ -63,7 +63,7 @@ public class Pairs<K, V> implements Iterable<Pair<K, V>> {
     @Override
     public Pair<K, V> next() {
         if(pairs[next] instanceof Pair ) {
-            prev++;
+            current++;
             return pairs[next++];
         }else {
       throw new UnsupportedOperationException();}
@@ -80,11 +80,11 @@ public class Pairs<K, V> implements Iterable<Pair<K, V>> {
         }
         if(pairsCount == 0){
       throw new UnsupportedOperationException();}
-        remove(prev);
-        prev--;
+        remove(current);
+        current--;
         next--;
     }
-    public void remove(int index){
+    private void remove(int index){
         for (int i = index; i < pairsCount-1; i++) {
             pairs[i] = pairs[i+1];
         }

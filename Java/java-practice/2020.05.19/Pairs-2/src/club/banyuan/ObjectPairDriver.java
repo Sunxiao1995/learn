@@ -27,7 +27,7 @@ public class ObjectPairDriver {
     String maxString = stadiums[0].getSecond().toString().replace(",","");
     for (int i = 0; i < stadiums.length ; i++) {
       String a = stadiums[i].getSecond().toString().replace(",","");
-      if(Integer.parseInt(maxString) > Integer.parseInt(a)){
+      if(Integer.parseInt(max.getSecond().toString().replace(",","")) < Integer.parseInt(a)){
         max = stadiums[i];
       }
     }
