@@ -27,10 +27,12 @@ public class TimerForAppendAndPrepend implements Timer{
     @Override
     public void reset() {
       recordingTime = 0;
+      isTimerStop = true;
     }
 
     @Override
     public long getTimeMillisecond() {
-        return stopTime-startTime;
+        recordingTime = stopTime-startTime;
+        return recordingTime;
     }
 }
