@@ -8,19 +8,19 @@ public class TimerForAppendAndPrepend implements Timer{
 
     @Override
     public void start() throws IllegalStateException {
-        startTime = System.currentTimeMillis();
         while (!isTimerStop){
             throw new IllegalStateException();
         }
+        startTime = System.currentTimeMillis();
         isTimerStop = false;
     }
 
     @Override
     public void stop() throws IllegalStateException {
-        stopTime = System.currentTimeMillis();
         while (isTimerStop){
             throw new IllegalStateException();
         }
+        stopTime = System.currentTimeMillis();
         isTimerStop = true;
     }
 

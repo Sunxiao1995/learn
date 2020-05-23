@@ -20,6 +20,7 @@ public class TestRecommender {
 
 
         Assert.assertTrue(one.likesBoth("张三","1111","1114"));
+
         System.out.println(one.recommendByPerson("张三"));
         System.out.println(one.recommendByProject("1111"));
     }

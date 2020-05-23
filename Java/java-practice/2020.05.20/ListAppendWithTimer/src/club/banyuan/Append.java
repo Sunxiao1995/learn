@@ -24,7 +24,7 @@ import java.util.List;
  * e.显示时间
  */
 public class Append {
-  private final static int n = 1000000;
+  private final static int n = 150;
 
   public static void main(String args[]) {
     TimerForAppendAndPrepend aTimer = new TimerForAppendAndPrepend();
