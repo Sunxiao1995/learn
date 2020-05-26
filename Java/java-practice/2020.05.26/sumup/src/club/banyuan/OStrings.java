@@ -37,11 +37,11 @@ public class OStrings {
    File file = new File(path);
    if(file.exists() && file.isFile()){
      try(OutputStream outputStream = new FileOutputStream(file)) {
-       String [][] mulTable = new String[n][n];
+
        for (int i = 0;i < n;i++){
          for(int j = 0;j < n;j++){
-           mulTable[i][j] = Integer.toString((i+1)*(j+1))+"  ";
-           outputStream.write(mulTable[i][j].getBytes());
+           String string = Integer.toString((i+1)*(j+1))+"  ";
+           outputStream.write(string.getBytes());
            if(j == n-1){
              outputStream.write("\n".getBytes());
            }
