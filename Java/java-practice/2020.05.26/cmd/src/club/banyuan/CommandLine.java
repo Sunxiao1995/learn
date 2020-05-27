@@ -56,7 +56,9 @@ public class CommandLine {
       //第一个命令正确 需要保证第二个第三个命令符合要求才能正确执行 ls命令 第二个路径存在且为文件夹 第三个为-l 打印调用printFile方法
       // cp 命令第二个参数为文件路径 第三个参数为文件夹路径 copy调用executeThreeArgumentCommand方法
       case 3:
-        if (args[0].equals("ls") || args[0].equals("cp")) {
+        String cmd = args[0];
+
+        if (cmd.equals("ls") || args[0].equals("cp")) {
           File originalPath = new File(args[1]);
           File targetPath = new File(args[2]);
           if (args[0].equals("ls") && args[2].equals("-l") && originalPath.exists() && originalPath
@@ -151,9 +153,9 @@ public class CommandLine {
     }
     DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-    System.out.printf(fileIsDictionary + "    %4d" + "        "
+    System.out.printf(fileIsDictionary + "\t\t%4d" + "\t\t "
         + dateFormat.format(new Date(file.lastModified()))
-        + "        " + file.getName() + "\n", dictionaryLength);
+        + "\t\t" + file.getName() + "\n", dictionaryLength);
   }
 
   /**
@@ -161,16 +163,15 @@ public class CommandLine {
    * @param file 传入的文件
    */
   public static void deleteFile(File file) {
-    if (file.isDirectory()) {
-      if (file.listFiles() == null) {
-        file.delete();
-      }
-      for (File deleted : file.listFiles()) {
-        deleteFile(deleted);
-      }
-    } else {
-      file.delete();
-    }
+   if (file.isDirectory() && file.listFiles() != null){
+     for (File deleted : file.listFiles()) {
+       if(file.isDirectory())
+       deleteFile(deleted);
+     }
+   }
+    file.delete();
+
+
   }
 
   @Test
@@ -184,6 +185,7 @@ public class CommandLine {
     System.out.println("------ls ../ --------");
     String[] args3 = {"ls", "../"};
     main(args3);
+
 
   }
 

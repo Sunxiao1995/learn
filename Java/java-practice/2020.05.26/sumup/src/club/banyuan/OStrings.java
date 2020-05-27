@@ -1,7 +1,6 @@
 package club.banyuan;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -40,7 +39,7 @@ public class OStrings {
 
        for (int i = 0;i < n;i++){
          for(int j = 0;j < n;j++){
-           String string = Integer.toString((i+1)*(j+1))+"  ";
+           String string =((i+1)*(j+1))+"  ";
            outputStream.write(string.getBytes());
            if(j == n-1){
              outputStream.write("\n".getBytes());
