@@ -250,7 +250,7 @@ public class VendingMachineWithMenu implements MenuFlow<FlowStatus>, Serializabl
           menu.back();
           break;
         case QUIT:
-          flowStatus = ROOT;
+          menu.back();
           return;
       }
     }
