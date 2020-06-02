@@ -24,6 +24,6 @@ public class UdpServer {
       System.out.println(received);
 
     }
-
+     ds.close();
   }
 }
