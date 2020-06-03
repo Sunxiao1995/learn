@@ -9,6 +9,7 @@ import java.net.InetAddress;
 
 public class UdpClient {
 
+
   public static void main(String[] args) throws IOException {
     DatagramSocket ds = new DatagramSocket();
     System.out.println("键入发送数据 输入1111结束：");
@@ -26,6 +27,7 @@ public class UdpClient {
       }
 
     }
+    bufferedReader.close();
     ds.close();
   }
 }
