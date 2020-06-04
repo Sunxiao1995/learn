@@ -10,6 +10,8 @@ import java.util.Arrays;
 public class BufferedSend {
 
   public static void send(OutputStream outputStream, File file) throws IOException {
+
+    // 发送文件时前256 代表文件名 之后的256代表文件大小 后面读文件读1位确定是否需要加密
     byte[] fileName = file.getName().getBytes();
     fileName = Arrays.copyOf(fileName, 256);
     outputStream.write(fileName);

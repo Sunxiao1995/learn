@@ -21,15 +21,20 @@ public class FileServer {
       System.out.println(hostAddress + " 客户端接入。。");
 
       InputStream inputStream = socket.getInputStream();
+
+      // 发送的文件 前256byte 代表文件名
       byte[] fileNameBytes = new byte[256];
       inputStream.read(fileNameBytes);
       String fileName = new String(fileNameBytes, "UTF-8").trim();
       BufferedWriter bufferedWriter = new BufferedWriter(
           new FileWriter("/Users/sunxiao/Desktop/" + fileName));
 
+      //调用方法接收文件
       BufferedReceive.receive(inputStream, bufferedWriter);
 
       OutputStream outputStream = socket.getOutputStream();
+
+      //如果客户端传来请求下载文件 即为1 执行后面代码 如果没有 则退出
       byte[] aByte = new byte[1];
       inputStream.read(aByte);
       String s = new String(aByte);
@@ -45,12 +50,15 @@ public class FileServer {
         Arrays.copyOf(bytes1, 2048);
         outputStream.write(bytes1);
 
-        byte[] copyFile = new byte[256];
-        inputStream.read(copyFile);
-        String copyFilename = new String(copyFile).trim();
-        File copyFile1 = new File("/Users/sunxiao/Desktop/" + copyFilename);
 
-        BufferedSend.send(outputStream, copyFile1);
+        //读客户端需要下载的文件名
+        byte[] copyFileName = new byte[256];
+        inputStream.read(copyFileName);
+        String copyFilename = new String(copyFileName).trim();
+        File copyFile = new File("/Users/sunxiao/Desktop/" + copyFilename);
+
+        //根据文件名向客户端发送文件
+        BufferedSend.send(outputStream, copyFile);
 
       }
 

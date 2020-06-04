@@ -8,6 +8,8 @@ public class BufferedReceive {
 
   public static void receive(InputStream inputStream, BufferedWriter bufferedWriter)
       throws IOException {
+
+    //接收的时候外面已经创建了对应文件名的空文件 在读256知道其大小 在inputStream.read(bytes)防止其阻塞 只读到对应的大小就停止；
     byte[] fileLengthBytes = new byte[256];
     inputStream.read(fileLengthBytes);
     String fileLength = new String(fileLengthBytes, "UTF-8").trim();

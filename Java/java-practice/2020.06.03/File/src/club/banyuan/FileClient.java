@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class FileClient {
 
   public static void main(String[] args) {
-    try (Socket socket = new Socket("192.168.2.102", 10000)) {
+    try (Socket socket = new Socket("192.168.10.248", 10000)) {
       System.out.println("客户端启动");
 
       OutputStream outputStream = socket.getOutputStream();
