@@ -10,8 +10,8 @@ import java.net.InetAddress;
 public class UdpClient {
 
 
-  public static void main(String[] args) throws IOException {
-    DatagramSocket ds = new DatagramSocket();
+  public static void main(String[] arDatagramSocket ds = new Datags) throws IOException {
+    gramSocket();
     System.out.println("键入发送数据 输入1111结束：");
     BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
     String line = null;
