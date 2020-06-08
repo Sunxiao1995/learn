@@ -300,3 +300,7 @@ fred's pick-up truck sold for $5000
 pick-up trucks by fred: $5000
 reddy for sale pickup truck: $5000)
 ```
+
+
+
+^(((red)( \w*){0,2}(\spick)[\s-]?(up\struck))|((pick)[\s-]?(up\struck)( \w*){0,2}(\sred)))\s\$((\d{1,3}(,\d{3})*)|(\d)+)(.\d\d)?$
