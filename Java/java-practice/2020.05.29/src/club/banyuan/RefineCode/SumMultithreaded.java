@@ -1,4 +1,4 @@
-package club.banyuan;
+package club.banyuan.RefineCode;
 
 /**
  * 线程计算数组元素的正弦值的和。

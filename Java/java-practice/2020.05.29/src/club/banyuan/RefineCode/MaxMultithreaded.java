@@ -1,7 +1,6 @@
-package club.banyuan;
+package club.banyuan.RefineCode;
 
-class MaxThread extends Thread {
-
+class MaxThread extends Thread{
   private int lo, hi;
   private int[] arr;
   private double ans = 0;
@@ -15,10 +14,10 @@ class MaxThread extends Thread {
   @Override
   public void run() {
     ans = Math.sin(arr[lo]);
-    for (int i = lo; i < hi; i++) {
-      double sin = Math.sin(arr[i]);
-      if (ans < sin) {
-        ans = sin;
+    for(int i = lo + 1; i < hi; i++){
+      double t = Math.sin(arr[i]);
+      if( t > ans){
+        ans = t;
       }
     }
   }
@@ -28,18 +27,19 @@ class MaxThread extends Thread {
   }
 }
 
+
 public class MaxMultithreaded {
 
   /**
-   * 计算数组元素的sin值之后，返回最大值。
+   * 求数组元素的最大值。
    *
    * @param arr 目标数组
-   * @return sin(数组元素)的最大值
+   * @return 数组元素的最大值
    * @throws InterruptedException 不应该出现此异常
    */
   public static double max(int[] arr, int numThreads) throws InterruptedException {
     int len = arr.length;
-    double ans = Double.NEGATIVE_INFINITY;
+    double ans = 0;
 
     // 创建并启动线程。
     MaxThread[] ts = new MaxThread[numThreads];
@@ -51,11 +51,17 @@ public class MaxMultithreaded {
     // 等待线程完成并计算它们的结果。
     for (int i = 0; i < numThreads; i++) {
       ts[i].join();
-
-      if (ans < ts[i].getAns()) {
+      if(ts[i].getAns() > ans){
         ans = ts[i].getAns();
       }
     }
+
     return ans;
+
   }
+
+  public static void main(String[] args) throws InterruptedException {
+    System.out.println(max(new int[]{3,4,5,6,1,7,8,9},4));
+  }
+
 }

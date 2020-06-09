@@ -1,3 +1,5 @@
+package club.banyuan.PhoneSimulatoRefine;
+
 public class Driver {
 
   public static void main(String[] args) {
@@ -11,20 +13,24 @@ public class Driver {
     pcGen1.start();
     pcGen2.start();
 
-    MessageGenerator mother = new MessageGenerator("Mother", aPhone);
-    MessageGenerator father = new MessageGenerator("Father", aPhone);
-    mother.start();
-    father.start();
+    MessageGenerator Mg1 = new MessageGenerator("Mother",aPhone);
+    MessageGenerator Mg2 = new MessageGenerator("Father",aPhone);
+    MessageGenerator Mg3 = new MessageGenerator("Brother",aPhone);
+    MessageGenerator Mg4 = new MessageGenerator("Sister",aPhone);
+    Mg1.start();
+    Mg2.start();
+    Mg3.start();
+    Mg4.start();
 
     try {
       // 等待，直到所有的电话都结束
       pcGen1.join();
       pcGen2.join();
-
-      mother.join();
-      father.join();
-
       // 停止电话
+      Mg1.join();
+      Mg2.join();
+      Mg3.join();
+      Mg4.join();
       aPhone.stopPhone();
     } catch (InterruptedException ie) {
       // 必须要处理的join抛出的异常

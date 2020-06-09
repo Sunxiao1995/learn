@@ -24,10 +24,10 @@ Driver - 程序入口。
 需要Driver类中创建至少MessageGenerator(就像phonecallgenerator一样)。
 要使用MessageGenerator，需要将以下方法添加到CellularPhone类:
 
-向手机发送消息
+将消息输出到控制台
 * public void addMessage( String newMessage )
 
-在手机空闲的时候（没有接听电话的状态），打印出手机收到的没有显示过的消息。
+打印出手机收到的所有信息。
 * private void displayMessages()
 
 

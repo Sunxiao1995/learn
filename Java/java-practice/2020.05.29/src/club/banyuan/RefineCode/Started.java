@@ -1,4 +1,4 @@
-package club.banyuan;
+package club.banyuan.RefineCode;
 
 class ExampleThread extends Thread {
     private int id;

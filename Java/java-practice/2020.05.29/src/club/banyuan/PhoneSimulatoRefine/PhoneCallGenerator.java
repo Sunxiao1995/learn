@@ -1,3 +1,5 @@
+package club.banyuan.PhoneSimulatoRefine;
+
 import java.util.Random;
 
 
@@ -32,14 +34,13 @@ public class PhoneCallGenerator extends Thread {
         } else {
           // Sleep让其他线程有机会，然后告诉用户调用已被放弃
           System.out.println("<" + this.getName()
-              + ">: Busy, call dropped");
+              + ">: Busy, call (" + counter + ") dropped");
           sleep(length * 1000);
         }
         // 让其他线程有机会
-        sleep(randomGenerator.nextInt(2));
+        sleep(randomGenerator.nextInt(2) * 1000);
       }
     } catch (InterruptedException e) {
     }
-    System.out.println(getName() + " quit");
   }
 }
