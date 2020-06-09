@@ -10,10 +10,10 @@ public class Reflect {
 
   public static void printInfo(Object object){
     Class  aClass =  object.getClass();
-    Method[] methods = aClass.getMethods();
+    Method[] methods = aClass.getDeclaredMethods();
     bubbleSort(methods, methods.length);
 
-    Field[] field = aClass.getFields();
+    Field[] field = aClass.getDeclaredFields();
     bubbleSort(field,field.length);
 
     for (Method m:methods) {
