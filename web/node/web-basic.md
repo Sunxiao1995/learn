@@ -98,10 +98,17 @@ content 和http-equiv name 等配套使用
 - **\<script>**
 
   - \<script> 标签用于定义客户端脚本，比如 JavaScript。
-
   - script 元素既可以包含脚本语句，也可以通过 src 属性指向外部脚本文件。
   - 必需的 type 属性规定脚本的 MIME 类型。
   - JavaScript 的常见应用时图像操作、表单验证以及动态内容更新。
+
+  ```html
+  <script type="text/javascript">
+  document.write("Hello World!")
+  </script>
+  ```
+
+  
 
 - **\<style>**
 
@@ -111,7 +118,7 @@ content 和http-equiv name 等配套使用
 <head>
 <meta charset="utf-8"> 
 <title>菜鸟教程(runoob.com)</title>
-<style type="text/css">
+<style type="text/css"> //值 "text/css" 指示内容是标准的 CSS。
 h1 {color:red;}
 p {color:blue;}
 </style>
