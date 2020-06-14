@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+            img{
+                min-height: 500px;
+                min-width: 1000px;
+                position: relative;
+                top: 20px;
+            }
+            img::before{
+                content: " ";
+                display: block;
+                position: absolute;
+                top:-10px;
+                height: 15%;
+                width: 50%;
+                background-color:rgb(230,230,230);
+                border: 2px rgb(200,200,200) dotted;
+                border-radius: 5px;
+                clear: both;
+            }
+
+            img::after{
+               content: "Broken image of " attr(alt); 
+               display: block;
+               font-size: 16px;
+               color: rgb(100,100,100);
+               position: absolute;
+               top: 5px;
+               left: 0;
+               width: 50%;
+               text-align: center;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div>
+        <img src="http://byimage.oss-cn-shanghai.aliyuncs.com/Pre/drumkit/cover.jpg" alt="测试图片">
+       </div>
+    </body>
+</html>

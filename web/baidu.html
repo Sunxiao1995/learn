@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .head{
+                position: absolute;
+                min-width: 1000px;
+                width: 100%;
+                color: #000;
+
+            }
+
+            .left{
+
+              float: left;
+              position: absolute;
+              left: 0;
+              top: 0;
+              height: 60px;
+              padding-left: 18px;
+
+              
+          }
+          .right{
+              float: right;
+              position: absolute;
+              top: 0;
+              right: 0;
+              height: 60px;
+              padding-right: 24px;
+          }
+
+            .head>* *{
+                display: inline-block;
+                font-size: 13px;
+                line-height: 23px;
+                position: relative;
+                text-decoration: none; 
+                color: #000;  
+            }
+          .left a{
+             margin-top: 19px;
+             margin-right: 26px;    
+          }
+
+          .right a,#setting{
+             margin-top: 19px;
+             margin-left: 26px; 
+          }
+          #important{
+            color: red;
+          }
+          #important:hover{
+              color: #4e71f2;
+          }
+
+         
+
+          #enter{ 
+           line-height: 24px; 
+           width: 48px; 
+           background-color: #4e71f2; 
+           margin-top: 18px;
+           margin-left: 28px;
+           margin-right: 8px;
+           color: #fff;
+           border-radius: 6px;
+           text-align: center;
+          }
+
+          a:hover{
+              color: #4e71f2;
+          }
+          .right *:hover{
+            color:#4e71f2;
+            cursor:pointer;
+          }
+
+
+          
+
+        </style>
+      
+
+       
+
+    </head>
+
+    <body>
+        <div class="head">
+
+       
+        <div class="left">
+        <a href="http://news.baidu.com" >新闻</a>
+        <a href="https://www.hao123.com">hao123</a>
+        <a href="lhttp://map.baidu.com">地图</a>
+        <a href="https://haokan.baidu.com/?sfrom=baidu-top">视频</a>
+        <a href="http://tieba.baidu.com">贴吧</a>
+        <a href="http://xueshu.baidu.com">学术</a>
+        <a href="http://www.baidu.com/more/">更多</a>
+        </div>
+
+
+       
+
+        <div class="right">
+        <a id ="important" href="http://news.baidu.com" >抗击肺炎</a>
+        <span id="setting" >设置</span>
+        <span id="enter" >登录</span>
+
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>heart</title>
+        <style>
+            body{
+                background-color: black;
+            }
+
+            .container{
+                height: 500px;
+                width: 400px;
+                margin: 0 auto;
+                position: relative;
+                animation: heartbeat 0.3s infinite alternate;
+                margin-top: 200px;
+            }
+
+            .child{
+                height: 200px;
+                width: 200px;
+                background-color: red;
+                border-radius: 50%;
+                position:absolute;
+            }
+
+            .left{
+                left: 40px;
+            }
+
+            .right{
+                right: 40px;
+            }
+
+            .bottom{
+                height: 180px;
+                width: 180px;
+                background-color: red;
+                position: absolute;
+                top: 84px;
+                left: 110px;
+                transform: rotate(45deg);
+            }
+
+            @keyframes heartbeat{
+                from{}
+                to{
+                    transform: scale(1.2);
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="child left"></div>
+            <div class="child right"></div>
+            <div class="bottom"></div>
+        </div>
+    </body>
+</html>

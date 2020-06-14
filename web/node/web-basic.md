@@ -571,3 +571,119 @@ height 和width 可以改变图片的大小
 dl标签为自定义列表 dt是自定义的列表名  dd是列表的内容
 ```
 
+- **视屏**
+
+```html
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>菜鸟教程(runoob.com)</title> 
+</head>
+<body>
+
+<video width="320" height="240" controls="controls" autoplay="autoplay" muted>
+  <source src="http://by-image-test.oss-cn-shanghai.aliyuncs.com/mp4/audi-arya-stark.mp4" type="video/mp4" >
+  
+</video>
+
+</body>
+</html>
+```
+
+需要注意的是，如果需要设置视频的自动播放 在autoplay 的时候 要设置muted 静音才能自动播放
+
+- **音频**
+
+```html
+<!DOCTYPE HTML>
+<html>
+<body>
+
+<audio src="/i/horse.ogg" controls="controls" >
+
+</audio>
+
+</body>
+</html>
+```
+
+- **表格**
+
+  ```html
+  <html>
+  <body>
+  
+  <table border="1">
+  <tr>
+    <th>姓名</th>
+    <th>电话</th>
+    <th>电话</th>
+  </tr>
+  <tr>
+    <td>Bill Gates</td>
+    <td>555 77 854</td>
+    <td>555 77 855</td>
+  </tr>
+  </table>
+  
+  ```
+
+  tr 表示一行 th表示表头 td表示表格 border 表示表格框的样式 如果是0的话就是无边框  
+
+  <caption>我的标题</caption> 创建标题
+
+  colspan跨列
+
+  rowspan 跨行
+
+  cellpadding 单元格的字到表格框的距离
+
+​      cellspacing 表格间距
+
+​      bgcolor  可以添加颜色
+
+​     background 添加背景图像
+
+​      align 对齐
+
+​     
+
+- **表单**
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="/demo/demo_form.asp">
+First name:<br>
+<input type="text" name="firstname" value="Mickey">
+<br>
+Last name:<br>
+<input type="text" name="lastname" value="Mouse">
+<br><br>
+<input type="submit" value="Submit">
+</form> 
+
+<p>如果您点击提交，表单数据会被发送到名为 demo_form.asp 的页面。</p>
+
+</body>
+</html>
+
+```
+
+*<input>* 元素是最重要的*表单元素*。
+
+<input> 元素有很多形态，根据不同的 *type* 属性。
+
+| text   | 定义常规文本输入。                   |
+| ------ | ------------------------------------ |
+| radio  | 定义单选按钮输入（选择多个选择之一） |
+| submit | 定义提交按钮（提交表单）             |
+
+
+
+
+
+伪类和伪类选择器
