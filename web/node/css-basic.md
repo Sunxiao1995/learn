@@ -498,3 +498,78 @@ img
   }
 ```
 
+#### 8 布局
+
+##### 8.1 单列布局
+
+##### 8.2 2列布局 2列自适应
+
+##### 8.3 3列布局 3列自适应
+
+#### 9 动画
+
+
+
+**transition:**
+
+rotate 45(deg) 旋转
+
+scale(1.2) 放大
+
+translate(30px,3opx) 移动
+
+
+
+**transition:**
+
+一定时间之内 一组css属性变换到另一组属性的动画展示过程
+
+属性：
+
+transition-property：动画展示哪些属性 可以使用all 关键字
+
+transition-duration: 动画过程有多久
+
+transition-timing-funcyion:linear,ease,ease-in,ease-out,ease-in-out 贝塞尔曲线等：控制动画速度变化
+
+transition-delay：动画是否延迟执行；
+
+一般来说，将transition属性应用到最初的样式里，而不是放在结束的样式里，
+
+即定义动画开始之前的元素外观的样式。
+
+只需要给元素设置一次transition，浏览器就会负责以动画展示从一个样式到另一个样式，再返回最初样式的变化过程。
+
+1. 需要一个事件来触发，比如hover，所以没法在网页加载时自动触发。
+
+2. 是一次性的，不能重复发生，除非一再触发。
+
+3. 只能定义开始状态和结束状态，不能定义中间状态，也就是说只有两个状态。
+
+4. 一条transition规则，只能定义一个属性的变化，不能涉及多个属性。
+
+
+
+与transition不同的是，animation可以通过keyframes显式控制当前帧的属性值，
+
+而transition只能隐式来进行（不能指定每帧的属性值），所以相对而言animation的功能更加灵活。
+
+animation-name：keyframes中定义的动画名称；
+
+animation-duration：动画执行一次持续的时长；
+
+animation-timing-function：动画速率变化函数；
+
+animation-delay：动画延迟执行的时间；
+
+animation-iteration-count：动画执行的次数，可以是数字，或者关键字（infinate）;
+
+animation-direction：alternate(奇数次超前运行，偶数次后退运行)。
+
+animation-fill-mode：告诉浏览器将元素的格式保持为动画结束时候的样子。
+
+
+
+
+
+clip:rect( ) 裁剪

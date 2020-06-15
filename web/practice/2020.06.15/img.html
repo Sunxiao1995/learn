@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .img{
+                height: 150px;
+                width: 300px;
+                position: relative;
+                margin:0 auto;
+                overflow: hidden;
+                top: 200px;
+            }
+
+            img{
+                height: 150px;
+                width: 300px;
+                position: absolute;
+                animation: move 10s ease-out infinite;
+            }
+
+           .img>.one,img.two{
+            animation: move 10s ease-out infinite;
+           }
+
+            @keyframes move{
+               25%{
+                   transform: translateX(-300px);
+               }
+               50%{
+                transform: translateX(-600px);
+               }
+               75%{
+                transform: translateX(-900px);
+               }
+               100%{
+                transform: translateX(-1200px);
+               }
+            }
+
+
+        </style>
+
+    </head>
+
+    <body>
+        <div class="img">
+            <img class="one" src="/Users/sunxiao/learn/web/practice/2020.06.15/img/1.jpg" alt="1" style="left: 0px;">
+            <img class="two" src="/Users/sunxiao/learn/web/practice/2020.06.15/img/2.jpg" alt="2" style="left: 300px;">
+            <img class="three" src="/Users/sunxiao/learn/web/practice/2020.06.15/img/3.jpg" alt="3" style="left: 600px;">
+            <img class="fore" src="/Users/sunxiao/learn/web/practice/2020.06.15/img/4.jpg" alt="4" style="left: 900px;">
+            <img class="two" src="/Users/sunxiao/learn/web/practice/2020.06.15/img/1.jpg" alt="1" style="left: 1200px;">
+        </div>
+       
+    </body>
+</html>
