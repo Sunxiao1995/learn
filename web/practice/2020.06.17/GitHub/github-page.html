@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="/Users/sunxiao/Desktop/Github/github.css">
+       <script>
+
+             /* 获取元素 */
+             var setting = document.getElementsByClassName("header-setting-innerimg")[0];
+
+             var settingContainer = document.getElementsByClassName("header-setting-containor")[0];
+
+
+              /* 鼠标浮动 */
+             setting.onmouseover = function(){
+
+             settingContainer.style.display = "block";
+             }
+
+             settingContainer.onmouseleave = function (){
+
+             settingContainer.style.display = "none";
+             }
+
+
+       </script>
+        
+    </head>
+
+    <body>
+        <div class="header">
+               <div class="cat">
+                <a href="http://github.com"> <img src="./github-cat.jpg" alt="cat"></a> </div>
+                <div class="header-searchAndTips">
+                    <div class="header-searchAndTips-search">
+                        <input class="header-searchAndTips-search-input" type="text" placeholder="Search or jump to...">
+                        <div class="header-searchAndTips-search-inputImgs"> 
+                            <img class="" src="https://github.githubassets.com/images/search-key-slash.svg">
+                        </div>
+                        
+                    </div>
+                    <div class="head-searchAndTips-tips">
+                        <ol>
+                            <li class="head-searchAndTips-tips-li"><a href="https://github.com/pulls">Pull requests</a></li>
+                            <li class="head-searchAndTips-tips-li"><a href="https://github.com/issues">Issues</a></li>
+                            <li class="head-searchAndTips-tips-li"><a href="https://github.com/marketplace">Marketplace</a></li>
+                            <li class="head-searchAndTips-tips-li"><a href="https://github.com/explore">Explore</a></li>
+
+                        </ol>
+
+                         </div>
+
+                </div>
+                <div class="header-setting">
+                    <div class="header-setting-inner">
+                        <img class="header-setting-innerimg" src="./12.png" alt="">
+                        <svg>
+                            <path d="M5 9 L13 9 L9 13 Z"></path>
+                        </svg>
+
+                        <div class="header-setting-containor">
+                            <div class="header-setting-containor-one">Sign in as 
+                                <span style="font-weight: 600;">Sunxiao1995</span>
+                            </div>
+                            <div class="header-setting-containor-two">
+                                <div class="header-setting-containor-two-status">
+                                    <svg>
+                                        <path  d="M1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0zM8 0a8 8 0 100 16A8 8 0 008 0zM5 8a1 1 0 100-2 1 1 0 000 2zm7-1a1 1 0 11-2 0 1 1 0 012 0zM5.32 9.636a.75.75 0 011.038.175l.007.009c.103.118.22.222.35.31.264.178.683.37 1.285.37.602 0 1.02-.192 1.285-.371.13-.088.247-.192.35-.31l.007-.008a.75.75 0 111.222.87l-.614-.431c.614.43.614.431.613.431v.001l-.001.002-.002.003-.005.007-.014.019a1.984 1.984 0 01-.184.213c-.16.166-.338.316-.53.445-.63.418-1.37.638-2.127.629-.946 0-1.652-.308-2.126-.63a3.32 3.32 0 01-.715-.657l-.014-.02-.005-.006-.002-.003v-.002h-.001l.613-.432-.614.43a.75.75 0 01.183-1.044h.001z"></path>
+                                    </svg>
+                                    Set status</div> 
+
+
+                            </div>
+                            <div class="header-setting-containor-three"> 
+                                <li><a href="">Your profile</a></li>
+                                <li><a href="">Your repositories</a></li>
+                                <li><a href="">Your projects</a></li>
+                                <li> <a href="">Your stars</a></li>
+                                <li><a href="">Your gists</a></li>
+                            </div>
+                            <div class="header-setting-containor-four">
+                                <li><a href="">Upgrade</a></li>
+                                <li><a href="">Feature preview</a></li>
+                                <li><a href="">Help</a></li>
+                                <li> <a href="">Settings</a></li>
+                                <li><a href="">Sign out</a></li>
+                                </div>
+                            
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="header-newmenu">
+                    <div class="svg">
+                    <svg>
+                        <path fill-rule="evenodd" d="M8 2a.75.75 0 01.75.75v4.5h4.5a.75.75 0 010 1.5h-4.5v4.5a.75.75 0 01-1.5 0v-4.5h-4.5a.75.75 0 010-1.5h4.5v-4.5A.75.75 0 018 2z"></path>
+                         <path d="M18 8 L26 8 L22 12 Z"></path>   
+                    </svg> 
+                </div>
+                    <div class="header-newmenu-containor">
+                        <li><a href="">New respository</a></li>
+                        <li><a href="">Import repository</a></li>
+                        <li><a href="">New gist</a></li>
+                        <li> <a href="">New organization</a></li>
+                        <li><a href="">New project</a></li>
+                    </div>
+
+
+                </div>
+
+                <div class="header-notifications">
+                    <a href="https://github.com/notifications">
+                    <svg>
+                    <path  d="M8 16a2 2 0 001.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 008 16z" ></path>
+                    <path fill-rule="evenodd" d="M8 1.5A3.5 3.5 0 004.5 5v2.947c0 .346-.102.683-.294.97l-1.703 2.556a.018.018 0 00-.003.01l.001.006c0 .002.002.004.004.006a.017.017 0 00.006.004l.007.001h10.964l.007-.001a.016.016 0 00.006-.004.016.016 0 00.004-.006l.001-.007a.017.017 0 00-.003-.01l-1.703-2.554a1.75 1.75 0 01-.294-.97V5A3.5 3.5 0 008 1.5zM3 5a5 5 0 0110 0v2.947c0 .05.015.098.042.139l1.703 2.555A1.518 1.518 0 0113.482 13H2.518a1.518 1.518 0 01-1.263-2.36l1.703-2.554A.25.25 0 003 7.947V5z"></path>
+                    </svg>
+                    </a>
+                </div>
+        </div>
+
+
+        <!-- 左边栏目 -->
+        <div class="left-column">
+            <div class="left-column-top">
+                <span style="font-weight: 600;">Repositories <a class="left-column-top-icon" href=""><svg class="left-column-top-icon-svg">
+                    <path fill-rule="evenodd" d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1V9h-8c-.356 0-.694.074-1 .208V2.5a1 1 0 011-1h8zM5 12.25v3.25a.25.25 0 00.4.2l1.45-1.087a.25.25 0 01.3 0L8.6 15.7a.25.25 0 00.4-.2v-3.25a.25.25 0 00-.25-.25h-3.5a.25.25 0 00-.25.25z"></path>
+                  
+                </svg><pre>   New</pre></a></span>
+
+                <input class="left-column-top-input" type="text" placeholder="Find a repository">
+                <span class="left-column-top-firstContent"><a href="  ">Sunxiao1995/learn</a> </span>
+                <span class="left-column-top-secondContent"><a href="  ">Sunxiao1995/JAVA-180day</a></span>
+            </div>
+
+            <div class="left-column-bottom">
+                <div class="left-column-bottom-text">
+                    <span style="font-weight: 600; line-height: 34px;">Working with a team?</span><br>
+                      GitHub is built for collaboration. 
+                      Set up an organization to improve 
+                      the way your team works together, 
+                       and get access to more features.
+                       
+                        <a class="left-column-bottom-button" href="">Create an organization</a>
+                    
+                </div>
+
+               
+            </div>
+
+        </div>
+
+
+        <!-- 右边栏目 -->
+        <div class="right-column">
+
+
+        </div>
+
+
+        <!-- 中间栏目 -->
+        <div class="container">
+            <!-- 中间栏目顶部 -->
+            <div class="container-news">
+                <div class="container-news-first">
+                    <span class="container-news-first-icon"><a href=" "><img src="./112.png" alt=""></a></span>
+                    <div class="container-news-first-elem">
+                        <div class="container-news-first-elem-text"><a href=" ">muzihuoyubai </a>forked <a href=" ">muzihuoyubai/learn-1 </a> from <a href="">Sunxiao1995/learn</a> <span>20 days ago</span></div>
+                         <div class="container-news-first-elem-frame">
+                             <div class="container-news-first-elem-frame-text"><a href=" ">Sunxiao1995/learn</a></div>
+                             <div class="container-news-first-elem-frame-icon"> 
+                                   <span> </span> Java <svg> <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path> 1</svg>
+                                   Updated  Jun 16
+
+                                  </div>
+
+                         </div>
+                    </div>
+
+                </div>
+
+                <div class="container-news-second">
+                    <span class="container-news-second-icon"><a href=" "><img src="./112.png" alt=""></a></span>
+                    <div class="container-news-second-elem">
+                        <div class="container-news-second-elem-text"><a href=" ">yangxingchen886 </a>forked <a href=" ">yangxingchen886/learn </a> from <a href="">Sunxiao1995/learn</a> <span>on 9 may</span></div>
+                         <div class="container-news-second-elem-frame">
+                             <div class="container-news-second-elem-frame-text"><a href=" ">Sunxiao1995/learn</a></div>
+                             <div class="container-news-second-elem-frame-icon"> 
+                                   <span> </span> Java <svg> <path fill-rule="evenodd" d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25zm0 2.445L6.615 5.5a.75.75 0 01-.564.41l-3.097.45 2.24 2.184a.75.75 0 01.216.664l-.528 3.084 2.769-1.456a.75.75 0 01.698 0l2.77 1.456-.53-3.084a.75.75 0 01.216-.664l2.24-2.183-3.096-.45a.75.75 0 01-.564-.41L8 2.694v.001z"></path> 1</svg>
+                                   Updated  Jun 16
+
+                                  </div>
+
+                         </div>
+
+                    </div>
+                </div>
+
+                <div class="container-news-third">
+                    <svg><path style="width: 11px;" fill-rule="evenodd" d="M8 1.5c-2.363 0-4 1.69-4 3.75 0 .984.424 1.625.984 2.304l.214.253c.223.264.47.556.673.848.284.411.537.896.621 1.49a.75.75 0 01-1.484.211c-.04-.282-.163-.547-.37-.847a8.695 8.695 0 00-.542-.68c-.084-.1-.173-.205-.268-.32C3.201 7.75 2.5 6.766 2.5 5.25 2.5 2.31 4.863 0 8 0s5.5 2.31 5.5 5.25c0 1.516-.701 2.5-1.328 3.259-.095.115-.184.22-.268.319-.207.245-.383.453-.541.681-.208.3-.33.565-.37.847a.75.75 0 01-1.485-.212c.084-.593.337-1.078.621-1.489.203-.292.45-.584.673-.848.075-.088.147-.173.213-.253.561-.679.985-1.32.985-2.304 0-2.06-1.637-3.75-4-3.75zM6 15.25a.75.75 0 01.75-.75h2.5a.75.75 0 010 1.5h-2.5a.75.75 0 01-.75-.75zM5.75 12a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-4.5z"></path></svg>
+                    <strong>ProTip! </strong>  <span>The feed shows you events from people you</span> <a href=" ">follow </a> <span>and repositories you</span> <a href=" "> watch.</a>
+                    <div style="height: 8px;"></div>
+                    <a class="container-news-third-a-block" style="color: rgb(36,41,46);" href=""><svg><path fill-rule="evenodd" d="M2.002 2.725a.75.75 0 01.797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 11-1.497.098 10.502 10.502 0 00-9.776-9.776.75.75 0 01-.7-.798zM2 13a1 1 0 112 0 1 1 0 01-2 0zm.84-5.95a.75.75 0 00-.179 1.489c2.509.3 4.5 2.291 4.8 4.8a.75.75 0 101.49-.178A7.003 7.003 0 002.838 7.05z"></path></svg>
+                        Subscribe to your news feed
+                    </a>
+                </div>
+            </div>
+
+
+
+
+
+            <!-- 中间栏目底部 -->
+            <div class="container-endding">
+                <div class="container-endding-left">
+                    <a href="" class="container-endding-left-link">
+                    <svg class="container-endding-left-cat">
+                        <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                    </svg>
+                     <span class="container-endding-left-inscribe">
+                        @ 2020 GitHub, Inc.
+                      </span>
+                    </a>
+                    
+
+                </div>
+                <div class="container-endding-right">
+                    <ul class="containor-endding-right-firstrow">
+                        <li class="containor-endding-right-firstrow-elem"><a href=" ">Blog</a></li>
+                        <li class="containor-endding-right-firstrow-elem"><a href=" ">About</a></li>
+                        <li class="containor-endding-right-firstrow-elem"><a href=" ">Shop</a></li>
+                        <li class="containor-endding-right-firstrow-elem"><a href=" ">Contact GitHub</a></li>
+                        <li class="containor-endding-right-firstrow-elem"><a href=" ">Pricing</a></li>
+                        
+                    </ul>
+                    <ul class="containor-endding-right-secondrow">
+                        <li class="containor-endding-right-firstrow-elem"><a href=" ">API</a></li>
+                        <li class="containor-endding-right-firstrow-elem"><a href=" ">Training</a></li>
+                        <li class="containor-endding-right-firstrow-elem"><a href=" ">Status</a></li>
+                        <li class="containor-endding-right-firstrow-elem"><a href=" ">Security</a></li>
+                    </ul>
+                    <ul class="containor-endding-right-thirdrow">
+                        <li class="containor-endding-right-firstrow-elem"><a href=" ">Terms</a></li>
+                        <li class="containor-endding-right-firstrow-elem"><a href=" ">Privacy</a></li>
+                        <li class="containor-endding-right-firstrow-elem"><a href=" ">Help</a></li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        
+
+      
+    </body>
+</html>
