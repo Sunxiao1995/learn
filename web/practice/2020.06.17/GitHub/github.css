@@ -188,7 +188,7 @@ body{
 
 /* new开关 */
 .header-newmenu-containor{
-    display:block;
+    display:none;
     position: absolute;
     width: 160px;
     height: 155px;
@@ -283,7 +283,7 @@ body{
 
 /* setting开关 */
 .header-setting-containor{
-    display:block;
+    display:none;
     position: absolute;
     
     
