@@ -13,7 +13,8 @@
 body{
     font-size: 14px;
     color:#24292e;
-    background-color:rgb(225,228,232);
+    background-color:rgb(239, 242, 247);
+   
     
 
 }
@@ -27,14 +28,7 @@ body{
     
 }
 
-.right-column{
-    width:350px;
-    height: calc(100vh - 32px);
-    margin-top: 32px;
-    padding-right: 16px;
-    border-bottom: 1px solid #e1e4e8 ; 
-    float: right;  
-}
+
 
 
 .cat *{
@@ -521,12 +515,15 @@ body{
     padding-right: 16px;
     margin-left: 350px;
     margin-right: 350px;
+   
 }
 
 /* 中间栏目顶部 */
 
 .container-news{
     height: calc(100vh - 190px);
+    max-width: 1400px;
+    margin: 0 auto;
    
 }
 
@@ -588,6 +585,7 @@ body{
     background-color: #fff;
     border: 1px solid rgba(27,31,35,0.15);
     border-radius: 3px;
+    position: relative;
 }
 
 .container-news-first-elem-frame-text{
@@ -640,6 +638,49 @@ body{
     fill: rgb(3, 102, 214);
     cursor: pointer;
 }
+
+
+.container-news-elem-frame-star{
+   float: right;
+   transform: translateY(-125%);
+   width: 90px;
+   height: 36px;
+  
+
+}
+
+.container-news-elem-frame-star-button{
+    width: 82px;
+    height: 28px;
+    margin-left: 8px;
+    margin-bottom: 8px;
+    padding: 3px 10px;
+    border: 1px solid rgba(27,31,35,0.15);
+    background-color: rgb(239, 243, 246);
+    border-radius: 3px;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    
+}
+
+.container-news-elem-frame-star-button svg{
+    transform: translateY(20%);
+
+}
+
+
+
+.container-news-elem-frame-star-button:hover{
+    background-color: rgb(189, 192, 194);
+    border: 1px solid rgba(27,31,35,0.45);
+    cursor: pointer;
+
+
+}
+
+
+
 
 
 
@@ -796,8 +837,9 @@ body{
 
 .container-endding{
     height: 110px;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    max-width: 1400px;
+    margin: 32px auto;
+
    
 }
 
@@ -862,6 +904,84 @@ body{
     color: rgb(3, 102, 214);
     text-decoration: underline;
 }
+
+
+
+/* 右边栏目 */
+.right-column{
+    width:350px;
+    height: calc(100vh - 32px);
+    margin-top: 32px;
+    padding-right: 16px;
+    border-bottom: 1px solid #e1e4e8 ; 
+    float: right;  
+}
+
+.right-column-first{
+ width: 334px;
+ height: 99px;
+ margin-bottom: 4px;
+ 
+}
+
+.right-column-first-1{
+    height: 21px;
+    line-height: 21px;
+    margin-bottom: 4px;
+    font-size: 14px;
+    font-weight: 600px;
+}
+
+.right-column-first-2{
+    height: 74px;
+    margin-top: 8px;
+    padding: 8px 0;
+    
+}
+
+
+.right-column-second{
+ width: 334px;
+ height: 68px;
+ border-bottom: 1px solid rgba(27,31,35,0.15);
+ border-top: 1px solid rgba(27,31,35,0.15);
+ margin: 8px 0;
+ padding: 8px 0;
+
+    
+}
+
+.right-column-third{
+ height: 84px;
+ width: 334px;
+ margin: 8px 0;
+ padding: 8px 0;
+ 
+    
+}
+
+.right-column-four{
+ width: 334px;
+ height: 18px;
+ margin-bottom: 16px;
+ 
+}
+
+.right-column a:hover{
+    color: #127cf5 !important;
+
+}
+
+.right-column span{
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    background-color: rgb(176,114,25);
+    border-radius: 6px;
+}
+
+
+
 
 
 
