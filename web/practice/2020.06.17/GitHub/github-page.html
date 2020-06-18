@@ -2,27 +2,7 @@
 <html>
     <head>
        <link rel="stylesheet" href="/Users/sunxiao/Desktop/Github/github.css">
-       <script>
-
-             /* 获取元素 */
-             var setting = document.getElementsByClassName("header-setting-innerimg")[0];
-
-             var settingContainer = document.getElementsByClassName("header-setting-containor")[0];
-
-
-              /* 鼠标浮动 */
-             setting.onmouseover = function(){
-
-             settingContainer.style.display = "block";
-             }
-
-             settingContainer.onmouseleave = function (){
-
-             settingContainer.style.display = "none";
-             }
-
-
-       </script>
+      
         
     </head>
 
@@ -250,6 +230,45 @@
                 </div>
             </div>
         </div>
+
+        <script>
+
+            /* 获取元素 */
+            var setting = document.getElementsByClassName("header-setting")[0];
+
+            var settingContainer = document.getElementsByClassName("header-setting-containor")[0];
+
+
+             /* 鼠标浮动 */
+            setting.onclick = function(){
+
+            settingContainer.style.display = "block";
+            }
+
+            settingContainer.onmouseleave = function (){
+
+            settingContainer.style.display = "none";
+            }
+
+
+            var news = document.getElementsByClassName("header-newmenu")[0];
+
+            var newsContainer = document.getElementsByClassName("header-newmenu-containor")[0];
+
+
+            /* 鼠标浮动 */
+            news.onclick = function(){
+
+            newsContainer.style.display = "block";
+            }
+
+            newsContainer.onmouseleave = function (){
+
+            newsContainer.style.display = "none";
+           }
+
+
+      </script>
         
 
       
