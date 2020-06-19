@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form class="form" name="form-np" method="POST" >
+        用户：  <input class="name" type="text" name="username">
+    </br>
+        密码：  <input class="word" type="password" name="password">
+    </br>
+    </br>
+    <button type="button" class="button">提交</button>
+    </form>
+
+
+
+    <script src="./jquery3.5.js"></script>
+    <script>
+       $('.button').click(function (){
+           var username = $('[name=username]').val();
+           var password = $('[name=password]').val();
+
+           var Upattern =  /^[a-zA-Z0-9_-]{4,16}$/;
+           var Ppattern = /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/;
+
+
+           //验证username
+           if(!Upattern.test(username) || !Ppattern.test(password)) {
+               if(!Upattern.test(username)){
+                   alert('username为 4到16位，字母，数字，下划线，减号')}
+                if(!Ppattern.test(password)){
+                   alert('password为至少6位，至少1个大写字母，1个小写字母，1个数字，1个特殊符号')}
+                return
+               }
+
+            $.ajax({
+                url:'http://192.168.10.73:10001/banyuan/form/action',
+                type: "post",
+                async : false, 
+                data : {"username":username,"password":password},
+                success : function(result) {
+                    alert(result.status);
+                },
+                error : function(error){
+                    alert("ERROR");
+
+                }
+
+            })
+           
+
+           
+
+       })
+
+
+    </script>
+    
+</body>
+</html>
