@@ -1,5 +1,7 @@
-package club.banyuan;
+package club.banyuan.service;
 
+import club.banyuan.entity.Product;
+import club.banyuan.util.JdbcUtils;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -8,7 +10,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Scanner;
 
 public class Order {

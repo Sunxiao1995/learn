@@ -1,4 +1,4 @@
-package club.banyuan;
+package club.banyuan.entity;
 
 public class Product {
   private Integer id;
