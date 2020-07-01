@@ -1,0 +1,46 @@
+NOTE: Picked up JDK_JAVA_OPTIONS:  --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Jul-2020 14:11:44.720 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.服务器版本: Apache Tomcat/9.0.36
+01-Jul-2020 14:11:44.724 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器构建:        Jun 3 2020 17:07:09 UTC
+01-Jul-2020 14:11:44.724 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 服务器版本号(:     9.0.36.0
+01-Jul-2020 14:11:44.725 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 操作系统名称:      Mac OS X
+01-Jul-2020 14:11:44.725 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS.版本:           10.15.4
+01-Jul-2020 14:11:44.725 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 架构:              x86_64
+01-Jul-2020 14:11:44.725 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java 环境变量:     /Library/Java/JavaVirtualMachines/jdk-11.0.2.jdk/Contents/Home
+01-Jul-2020 14:11:44.725 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java虚拟机版本:    11.0.2+7-LTS
+01-Jul-2020 14:11:44.726 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM.供应商:        Oracle Corporation
+01-Jul-2020 14:11:44.726 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /Users/sunxiao/learn/javaWeb/Tomcat
+01-Jul-2020 14:11:44.726 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /Users/sunxiao/learn/javaWeb/Tomcat
+01-Jul-2020 14:11:44.737 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：--add-opens=java.base/java.lang=ALL-UNNAMED
+01-Jul-2020 14:11:44.737 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：--add-opens=java.base/java.io=ALL-UNNAMED
+01-Jul-2020 14:11:44.737 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：--add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+01-Jul-2020 14:11:44.738 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.util.logging.config.file=/Users/sunxiao/learn/javaWeb/Tomcat/conf/logging.properties
+01-Jul-2020 14:11:44.738 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+01-Jul-2020 14:11:44.738 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djdk.tls.ephemeralDHKeySize=2048
+01-Jul-2020 14:11:44.739 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+01-Jul-2020 14:11:44.739 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+01-Jul-2020 14:11:44.739 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dignore.endorsed.dirs=
+01-Jul-2020 14:11:44.739 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dcatalina.base=/Users/sunxiao/learn/javaWeb/Tomcat
+01-Jul-2020 14:11:44.739 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Dcatalina.home=/Users/sunxiao/learn/javaWeb/Tomcat
+01-Jul-2020 14:11:44.739 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log 命令行参数：-Djava.io.tmpdir=/Users/sunxiao/learn/javaWeb/Tomcat/temp
+01-Jul-2020 14:11:44.740 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 在java.library.path:[/Users/sunxiao/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]上找不到基于APR的Apache Tomcat本机库，该库允许在生产环境中获得最佳性能
+01-Jul-2020 14:11:44.991 信息 [main] org.apache.coyote.AbstractProtocol.init 初始化协议处理器 ["http-nio-8080"]
+01-Jul-2020 14:11:45.018 信息 [main] org.apache.catalina.startup.Catalina.load 服务器在[478]毫秒内初始化
+01-Jul-2020 14:11:45.057 信息 [main] org.apache.catalina.core.StandardService.startInternal 正在启动服务[Catalina]
+01-Jul-2020 14:11:45.057 信息 [main] org.apache.catalina.core.StandardEngine.startInternal 正在启动 Servlet 引擎：[Apache Tomcat/9.0.36]
+01-Jul-2020 14:11:45.062 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/sunxiao/learn/javaWeb/Tomcat/webapps/docs]
+01-Jul-2020 14:11:45.275 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[/Users/sunxiao/learn/javaWeb/Tomcat/webapps/docs]的部署已在[213]毫秒内完成
+01-Jul-2020 14:11:45.275 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/sunxiao/learn/javaWeb/Tomcat/webapps/manager]
+01-Jul-2020 14:11:45.303 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[/Users/sunxiao/learn/javaWeb/Tomcat/webapps/manager]的部署已在[27]毫秒内完成
+01-Jul-2020 14:11:45.303 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/sunxiao/learn/javaWeb/Tomcat/webapps/examples]
+01-Jul-2020 14:11:45.492 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[/Users/sunxiao/learn/javaWeb/Tomcat/webapps/examples]的部署已在[189]毫秒内完成
+01-Jul-2020 14:11:45.493 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/sunxiao/learn/javaWeb/Tomcat/webapps/ROOT]
+01-Jul-2020 14:11:45.506 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[/Users/sunxiao/learn/javaWeb/Tomcat/webapps/ROOT]的部署已在[12]毫秒内完成
+01-Jul-2020 14:11:45.506 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory 把web 应用程序部署到目录 [/Users/sunxiao/learn/javaWeb/Tomcat/webapps/host-manager]
+01-Jul-2020 14:11:45.523 信息 [main] org.apache.catalina.startup.HostConfig.deployDirectory Web应用程序目录[/Users/sunxiao/learn/javaWeb/Tomcat/webapps/host-manager]的部署已在[17]毫秒内完成
+01-Jul-2020 14:11:45.528 信息 [main] org.apache.coyote.AbstractProtocol.start 开始协议处理句柄["http-nio-8080"]
+01-Jul-2020 14:11:45.536 信息 [main] org.apache.catalina.startup.Catalina.start [517]毫秒后服务器启动
+01-Jul-2020 14:11:53.538 信息 [main] org.apache.catalina.core.StandardServer.await 通过关闭端口接收到有效的关闭命令。正在停止服务器实例。
+01-Jul-2020 14:11:53.539 信息 [main] org.apache.coyote.AbstractProtocol.pause 暂停ProtocolHandler["http-nio-8080"]
+01-Jul-2020 14:11:53.549 信息 [main] org.apache.catalina.core.StandardService.stopInternal 正在停止服务[Catalina]
+01-Jul-2020 14:11:53.563 信息 [main] org.apache.coyote.AbstractProtocol.stop 正在停止ProtocolHandler ["http-nio-8080"]
+01-Jul-2020 14:11:53.565 信息 [main] org.apache.coyote.AbstractProtocol.destroy 正在摧毁协议处理器 ["http-nio-8080"]
