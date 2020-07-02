@@ -31,14 +31,19 @@ public class loginServlet extends HttpServlet {
     } catch (SQLException throwables) {
       throwables.printStackTrace();
     }
-    response.setCharacterEncoding("utf-8");
-    PrintWriter writer = response.getWriter();
-    writer.println("<html>");
-    writer.println("<meta charset='UTF-8'/>");
-    writer.println("<body>");
-    writer.println(flag==true?"登陆成功":"登陆失败");
-    writer.flush();
-    writer.close();
+//    response.setCharacterEncoding("utf-8");
+//    PrintWriter writer = response.getWriter();
+//    writer.println("<html>");
+//    writer.println("<meta charset='UTF-8'/>");
+//    writer.println("<body>");
+//    writer.println(flag==true?"登陆成功":"登陆失败");
+//    writer.flush();
+//    writer.close();
+    if(flag){
+       response.sendRedirect("success.html");
+    } else {
+      response.sendRedirect("filed.html");
+    }
 
   }
 

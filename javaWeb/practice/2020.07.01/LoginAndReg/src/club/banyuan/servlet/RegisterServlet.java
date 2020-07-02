@@ -34,21 +34,27 @@ public class RegisterServlet extends HttpServlet {
     } catch (SQLException throwables) {
       throwables.printStackTrace();
     }
-    response.setCharacterEncoding("utf-8");
-    PrintWriter writer = response.getWriter();
-    writer.println("<html>");
-    writer.println("<meta charset='UTF-8'/>");
-    writer.println("<body>");
-    writer.println(flag==true?"成功":"失败");
-    writer.println("<br/>");
-    writer.println("请选择注册或登陆");
-    writer.println("<br/>");
-    writer.println("<a href=\"Regist.html\"><button>注册</button></a>");
-    writer.println("<a href=\"Login.html\"><button>登陆</button></a>");
-    writer.println("</body>");
-    writer.println("</html>");
-    writer.flush();
-    writer.close();
+//    response.setCharacterEncoding("utf-8");
+//    PrintWriter writer = response.getWriter();
+//    writer.println("<html>");
+//    writer.println("<meta charset='UTF-8'/>");
+//    writer.println("<body>");
+//    writer.println(flag==true?"成功":"失败");
+//    writer.println("<br/>");
+//    writer.println("请选择注册或登陆");
+//    writer.println("<br/>");
+//    writer.println("<a href=\"Regist.html\"><button>注册</button></a>");
+//    writer.println("<a href=\"Login.html\"><button>登陆</button></a>");
+//    writer.println("</body>");
+//    writer.println("</html>");
+//    writer.flush();
+//    writer.close();
+
+    if(flag){
+      response.sendRedirect("success.html");
+    } else {
+      response.sendRedirect("filed.html");
+    }
 
   }
 
