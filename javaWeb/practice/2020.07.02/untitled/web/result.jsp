@@ -16,5 +16,8 @@
 <%=session.getAttribute("sessionAttr")%>
 <br/>
 <%=session.getAttribute("sessionAttr2")%>
+
+${ sessionScope.sessionAttr}
+
 </body>
 </html>

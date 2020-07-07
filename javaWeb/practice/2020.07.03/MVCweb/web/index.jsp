@@ -1,4 +1,4 @@
-<%@ page import="club.banyuan.Entity.User" %><%--
+<%@ page import="club.banyuan.entity.User" %><%--
   Created by IntelliJ IDEA.
   User: sunxiao
   Date: 2020/7/2

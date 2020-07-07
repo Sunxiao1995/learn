@@ -1,5 +1,5 @@
-<%@ page import="club.banyuan.Entity.Product" %>
-<%@ page import="club.banyuan.Entity.User" %><%--
+<%@ page import="club.banyuan.entity.Product" %>
+<%@ page import="club.banyuan.entity.User" %><%--
   Created by IntelliJ IDEA.
   User: edz
   Date: 2020/7/3
