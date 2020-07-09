@@ -33,7 +33,6 @@
            if (password === "" || username === ""){
              alert("用户名或密码不能为空！！！")
            }else{
-
              $("#submitFrom").submit();}
          });
 
@@ -46,8 +45,8 @@
     <div class="login">
       <dl>
         <dt class="blues">用户登陆</dt>
-        <dd><label for="name">用户名：</label><input name="userName" type="text" class="inputh" value="" id="name"/></dd>
-        <dd><label for="password">密 码：</label><input name="password" type="text" class="inputh" value="" id="password"/></dd>
+        <dd><label for="name">用户名：</label><input name="userName" type="text" class="inputh" value="" id="name"/><span id="errorName" style="color: red;line-height: 30px">${requestScope.errorUserName}</span></dd>
+          <dd><label for="password">密 码：</label><input name="password" type="text" class="inputh" value="" id="password"/><span id="errorPassword" style="color: red;line-height: 30px">${requestScope.errorPassword}</span></dd>
         <dd>
            <label class="lf" for="passwords">验证码：</label>
            <input type="text" class="inputh inputs lf" value="验证码" id="passwords"/>
@@ -55,7 +54,7 @@
            <span class="blues lf"><a href="" title="">看不清</a></span>
         </dd>
         <dd>
-           <input name=""  type="checkbox" id="rem_u"  />
+           <input name="cookie" type="checkbox" id="rem_u"  />
            <span for="rem_u">下次自动登录</span>
         </dd>
         <dd class="buttom">

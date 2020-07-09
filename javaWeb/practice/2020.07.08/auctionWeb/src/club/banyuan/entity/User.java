@@ -4,8 +4,8 @@ public class User {
   private int id;
   private String userName;
   private String password;
-  private int identityNum;
-  private int phoneNum;
+  private String identityNum;
+  private String phoneNum;
   private String address;
   private int postalCode;
 
@@ -33,19 +33,19 @@ public class User {
     this.password = password;
   }
 
-  public int getIdentityNum() {
+  public String getIdentityNum() {
     return identityNum;
   }
 
-  public void setIdentityNum(int identityNum) {
+  public void setIdentityNum(String identityNum) {
     this.identityNum = identityNum;
   }
 
-  public int getPhoneNum() {
+  public String getPhoneNum() {
     return phoneNum;
   }
 
-  public void setPhoneNum(int phoneNum) {
+  public void setPhoneNum(String phoneNum) {
     this.phoneNum = phoneNum;
   }
 
