@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet(name = "AdminLoginServlet" ,urlPatterns = "adminLogin.do")
+@WebServlet(name = "AdminLoginServlet" ,urlPatterns = "/adminLogin.do")
 public class AdminLoginServlet extends HttpServlet {
 
   protected void doPost(HttpServletRequest request, HttpServletResponse response)

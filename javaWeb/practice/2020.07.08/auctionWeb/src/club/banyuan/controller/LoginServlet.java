@@ -1,10 +1,14 @@
 package club.banyuan.controller;
 
+import club.banyuan.entity.AuctionItem;
 import club.banyuan.entity.User;
+import club.banyuan.service.AuctionItemService;
 import club.banyuan.service.UserService;
+import club.banyuan.service.impl.AuctionItemServiceImpl;
 import club.banyuan.service.impl.UserServiceImpl;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -48,8 +52,9 @@ public class LoginServlet extends HttpServlet {
             request.setAttribute("errorPassword",errorPassword);
             request.getRequestDispatcher("bidderLogin.jsp").forward(request,response);
           }else {
+            request.setAttribute("pageNowNum",1);
             session.setAttribute("user",user);
-            request.getRequestDispatcher("auctionItem_list.jsp").forward(request,response);
+            request.getRequestDispatcher("auctionList.do").forward(request,response);
           }
         }
       } catch (SQLException throwables) {
