@@ -29,6 +29,12 @@ public class AuctionItemServiceImpl implements AuctionItemService {
   }
 
   @Override
+  public int getAuctionItemPageCountBySearch(AuctionItem auctionItem) throws SQLException {
+    IAuctionItemDao auctionItemDao = new AuctionItemDaoImpl(JdbcUtils.getConnection());
+    return auctionItemDao.getAuctionItemPageCountBySearch(auctionItem);
+  }
+
+  @Override
   public boolean changeAuctionItem(AuctionItem auctionItem) throws SQLException {
     IAuctionItemDao auctionItemDao = new AuctionItemDaoImpl(JdbcUtils.getConnection());
     return auctionItemDao.changeAuctionItem(auctionItem);
@@ -38,5 +44,11 @@ public class AuctionItemServiceImpl implements AuctionItemService {
   public boolean deleteAuctionItem(int id) throws SQLException {
     IAuctionItemDao auctionItemDao = new AuctionItemDaoImpl(JdbcUtils.getConnection());
     return auctionItemDao.deleteAuctionItem(id);
+  }
+
+  @Override
+  public AuctionItem getAuctionItemById(int id) throws SQLException {
+    IAuctionItemDao auctionItemDao = new AuctionItemDaoImpl(JdbcUtils.getConnection());
+    return auctionItemDao.getAuctionItemById(id);
   }
 }

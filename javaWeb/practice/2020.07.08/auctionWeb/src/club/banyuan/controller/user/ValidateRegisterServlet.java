@@ -1,4 +1,4 @@
-package club.banyuan.controller;
+package club.banyuan.controller.user;
 
 import club.banyuan.service.impl.UserServiceImpl;
 import java.io.IOException;
@@ -19,7 +19,7 @@ public class ValidateRegisterServlet extends HttpServlet {
     UserServiceImpl userService = new UserServiceImpl();
     String result = "true";
     String userName = request.getParameter("userName");
-    if(!userName.equals("") &&userName!=null){
+    if(!userName.equals("") && userName!=null){
       try {
         if(userService.isUserExists(userName)){
           result = "false";

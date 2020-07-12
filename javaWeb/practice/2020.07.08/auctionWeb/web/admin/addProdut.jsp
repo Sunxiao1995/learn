@@ -5,8 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-<link href="css/common.css" rel="stylesheet" type="text/css" />
-<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/common.css" rel="stylesheet" type="text/css" />
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -14,7 +14,7 @@
   <!-- main begin-->
   <div class="sale">
     <h1 class="lf">在线拍卖系统</h1>
-    <div class="logout right"><a href="#" title="注销">注销</a></div>
+    <div class="logout right"><a href="logout.do" title="注销">注销</a></div>
   </div>
       <div class="login logns produce">
         <h1 class="blues">拍卖品信息</h1>
@@ -46,7 +46,7 @@
             </dd>
             <dd class="dds">
               <label>拍卖品图片：</label>
-               <div class="lf salebd"><a href="#"><img src="images/ad20.jpg" width="100" height="100" /></a></div>
+               <div class="lf salebd"><a href="#"><img src="../images/ad20.jpg" width="100" height="100" /></a></div>
               <input name="" type="file" class="offset10 lf" />
              
             </dd>

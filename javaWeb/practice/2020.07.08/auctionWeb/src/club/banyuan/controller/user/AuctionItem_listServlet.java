@@ -1,4 +1,4 @@
-package club.banyuan.controller;
+package club.banyuan.controller.user;
 
 import club.banyuan.entity.AuctionItem;
 import club.banyuan.service.AuctionItemService;
@@ -21,7 +21,7 @@ public class AuctionItem_listServlet extends HttpServlet {
 
   protected void doPost(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
-
+    System.out.println("sssss");
     AuctionItemService auctionItemService = new AuctionItemServiceImpl();
       request.setCharacterEncoding("utf-8");
       response.setCharacterEncoding("utf-8");
@@ -56,9 +56,11 @@ public class AuctionItem_listServlet extends HttpServlet {
     }
 
     if(request.getParameter("pageNowNum") == null) {
-    request.setAttribute("pageAllNum",pageAllNum);
+    session.setAttribute("pageAllNum",pageAllNum);
     session.setAttribute("homePage",list);
     request.getRequestDispatcher("auctionItem_list.jsp").forward(request,response);
+
+
     }else {
       PrintWriter writer = response.getWriter();
       writer.print(orderListJson);

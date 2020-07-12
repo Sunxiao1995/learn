@@ -29,12 +29,14 @@ public class AdminLoginServlet extends HttpServlet {
     AdminService adminService = new AdminServiceImpl();
     try {
        Admin admin = adminService.getAdmin(loginName,password);
+       System.out.println(loginName+password);
        if(admin.getLoginName()==null){
-         request.setAttribute("error","error");
+         request.setAttribute("error","用户名或密码错误");
          request.getRequestDispatcher("adminLogin.jsp").forward(request,response);
        }else {
+         request.setAttribute("pageNowNum",1);
          session.setAttribute("admin",admin);
-         request.getRequestDispatcher("").forward(request,response);
+         request.getRequestDispatcher("manageAuctionItem.do").forward(request,response);
        }
 
     } catch (SQLException throwables) {

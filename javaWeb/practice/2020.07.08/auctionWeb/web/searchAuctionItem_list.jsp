@@ -13,15 +13,19 @@
 </head>
 
 <body>
+
+
+
 <div class="wrap">
     <!-- main begin-->
     <div class="sale">
         <h1 class="lf">在线拍卖系统</h1>
-        <div class="logout right"><a href="#" title="注销">注销</a></div>
+        <div class="logout right"><a href="logout.do" title="注销">注销</a></div>
     </div>
     <div class="forms">
+        <form action="search.do" >
         <label for="name">名称</label>
-        <input name="" type="text" class="nwinput" id="name"/>
+        <input name="name" type="text" class="nwinput" id="name"/>
         <label for="names">描述</label>
         <input name="" type="text" id="names" class="nwinput"/>
         <label for="time">开始时间</label>
@@ -31,6 +35,7 @@
         <label for="price">起拍价</label>
         <input name="" type="text" id="price" class="nwinput" />
         <input name="" type="button"  value="查询" class="spbg buttombg f14  sale-buttom"/>
+        </form>
     </div>
     <div class="items">
 
@@ -44,7 +49,7 @@
         </ul>
 
         <%
-            List<AuctionItem> list = (List<AuctionItem>) session.getAttribute("homePage");
+            List<AuctionItem> list = (List<AuctionItem>) session.getAttribute("searchAuctionItem");
             int i=0;
             for (AuctionItem a : list) {
                 i=i+1;
@@ -56,28 +61,43 @@
       else{
         out.print("rows even");}
       %>">
-            <li><a href="国书" title=""><%=a.getName()%></a></li>
+            <li><a href="" title=""><%=a.getName()%></a></li>
             <li class="list-wd"><%=a.getDescription()%></li>
             <li><%=a.getStart_time()%></li>
             <li><%=a.getEnd_time()%></li>
             <li><%=a.getStarting_price()%></li>
-            <li class="borderno red"><a href="#">竞拍</a></li>
+            <li class="borderno red"><a href="startAuction.do?id=<%=a.getId()%>&type=search">竞拍</a></li>
         </ul>
         <%
             }
         %>
 
         <div class="page">
+
             <a href="#" title="">首页</a>
             <a href="#" title="">上一页</a>
-            <span class="red">共<%=request.getAttribute("pageAllNum")%>页</span>
-            <a href="#" title="">1</a>
-            <a href="#" title="">2</a>
-            <a href="#" title="">3</a>
-            <a href="#" title="">4</a>
-            <a href="#" title="">5</a>
+            <a class="red">共<%=session.getAttribute("pageAllNumBySearch")%>页</a>
+            <%
+                int pageAllNum = Integer.parseInt(session.getAttribute("pageAllNumBySearch").toString());
+//                int pageNowNum = Integer.parseInt(request.getAttribute("pageNowNum").toString());
+                int j;
+                if(pageAllNum <= 5){
+                    j=pageAllNum;
+                }else {
+                    j=5;
+                }
+            %>
+
+            <%
+                for (int k = 1; k <= j ; k++) {
+            %>
+            <a href="auctionList.do?pageNowNum=<%=k%>" title=""><%=k%></a>
+            <%
+                }
+            %>
             <a href="#" title="">下一页</a>
             <a href="#" title="">尾页</a>
+
         </div>
     </div>
     <!-- main end-->

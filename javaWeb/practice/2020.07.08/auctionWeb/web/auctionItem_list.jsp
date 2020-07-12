@@ -9,6 +9,7 @@
 <title>无标题文档</title>
 <link href="css/common.css" rel="stylesheet" type="text/css" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
 </head>
 
 <body>
@@ -16,20 +17,22 @@
 <!-- main begin-->
   <div class="sale">
     <h1 class="lf">在线拍卖系统</h1>
-    <div class="logout right"><a href="#" title="注销">注销</a></div>
+    <div class="logout right"><a href="logout.do" title="注销">注销</a></div>
   </div>
   <div class="forms">
-    <label for="name">名称</label>
-        <input name="" type="text" class="nwinput" id="name"/>
+      <form action="search.do">
+        <label for="name">名称</label>
+        <input name="name" type="text" value="" class="nwinput" id="name"/>
         <label for="names">描述</label>
-        <input name="" type="text" id="names" class="nwinput"/>
+        <input name="description" type="text" value="" id="names" class="nwinput"/>
         <label for="time">开始时间</label>
-        <input name="" type="text" id="time" class="nwinput"/>
+        <input name="start_time" type="text" value="" id="time" class="nwinput"/>
         <label for="end-time">结束时间</label>
-        <input name="" type="text" id="end-time" class="nwinput" />
+        <input name="end_time" type="text" value="" id="end-time" class="nwinput" />
         <label for="price">起拍价</label>
-    <input name="" type="text" id="price" class="nwinput" />
-    <input name="" type="button"  value="查询" class="spbg buttombg f14  sale-buttom"/>
+        <input name="starting_price" type="text" value="" id="price" class="nwinput" />
+        <input name="" type="submit"  value="查询" class="spbg buttombg f14  sale-buttom"/>
+      </form>
   </div>
   <div class="items">
 
@@ -60,26 +63,58 @@
         <li><%=a.getStart_time()%></li>
         <li><%=a.getEnd_time()%></li>
         <li><%=a.getStarting_price()%></li>
-        <li class="borderno red"><a href="#">竞拍</a></li>
+        <li class="borderno red"><a href="startAuction.do?id=<%=a.getId()%>&type=home">竞拍</a></li>
       </ul>
       <%
           }
       %>
 
     <div class="page">
+
         <a href="#" title="">首页</a>
         <a href="#" title="">上一页</a>
-        <span class="red">共<%=request.getAttribute("pageAllNum")%>页</span>
-        <a href="#" title="">1</a> 
-        <a href="#" title="">2</a> 
-        <a href="#" title="">3</a> 
-        <a href="#" title="">4</a>
-        <a href="#" title="">5</a> 
+        <a class="red">共<%=session.getAttribute("pageAllNum")%>页</a>
+        <%
+            int pageAllNum = Integer.parseInt(session.getAttribute("pageAllNum").toString());
+//            int pageNowNum = Integer.parseInt(request.getAttribute("pageNowNum").toString());
+            int j;
+            if(pageAllNum <= 5){
+              j=pageAllNum;
+            }else {
+              j=5;
+            }
+        %>
+
+        <%
+            for (int k = 1; k <= j ; k++) {
+        %>
+        <a href="auctionList.do?pageNowNum=<%=k%>" title=""><%=k%></a>
+        <%
+            }
+        %>
         <a href="#" title="">下一页</a>
-        <a href="#" title="">尾页</a> 
+        <a href="#" title="">尾页</a>
+
       </div>
   </div>
+
+    <script>
+
+    </script>
 <!-- main end-->
 </div>
+<input type="hidden" value="<%=request.getAttribute("error")%>" id="error"/>
+<script>
+
+  $(function () {
+      var error = $("#error").val();
+      if("timeOut"===error){
+        alert("不再竞拍时间")
+      }
+  });
+</script>
+
+
+
 </body>
 </html>

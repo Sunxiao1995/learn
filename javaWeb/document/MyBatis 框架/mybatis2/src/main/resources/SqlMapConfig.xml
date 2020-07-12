@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration     PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 配置mysql环境 -->
+    <environments default="mysql">
+        <environment id="mysql">
+            <transactionManager type="JDBC"></transactionManager>
+            <!--            针对数据库连接配置，type设置为pooled，数据库连接获取的方式是使用连接池-->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/shoppingstreet?&amp;useSSL=false&amp;serverTimezone=UTC"/>
+                <property name="username" value="root"/>
+                <property name="password" value="rootroot"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!-- MyBatis Mapper文件的位置 -->
+    <mappers>
+        <mapper resource="club/banyuan/dao/UserDao.xml"/>
+    </mappers>
+</configuration>
+

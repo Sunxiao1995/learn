@@ -1,4 +1,4 @@
-package club.banyuan.controller;
+package club.banyuan.controller.admin;
 
 import club.banyuan.entity.AuctionItem;
 import club.banyuan.service.AuctionItemService;
@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet(name = "ManageAuctionItemServlet",urlPatterns = "/manageAuctionItem.do")
+@WebServlet(name = "ManageAuctionItemServlet",urlPatterns = "/  ")
 public class ManageAuctionItemServlet extends HttpServlet {
 
   protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -56,9 +56,9 @@ public class ManageAuctionItemServlet extends HttpServlet {
     }
 
     if(request.getParameter("pageNowNum") == null) {
-      request.setAttribute("pageAllNum",pageAllNum);
+      session.setAttribute("pageAllNum",pageAllNum);
       session.setAttribute("homePage",list);
-      request.getRequestDispatcher("searchAuctionItem.jsp").forward(request,response);
+      request.getRequestDispatcher("manage_auction_item.jsp").forward(request,response);
     }else {
       PrintWriter writer = response.getWriter();
       writer.print(orderListJson);
@@ -71,6 +71,7 @@ public class ManageAuctionItemServlet extends HttpServlet {
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
       throws ServletException, IOException {
+    doPost(request,response);
 
   }
 }

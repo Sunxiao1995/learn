@@ -15,4 +15,8 @@ public interface AuctionItemService {
 
   public boolean deleteAuctionItem(int id) throws SQLException;
 
+  public int getAuctionItemPageCountBySearch(AuctionItem auctionItem) throws SQLException;
+
+  public AuctionItem getAuctionItemById(int id) throws SQLException;
+
 }

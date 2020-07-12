@@ -11,8 +11,13 @@ public interface IAuctionItemDao extends IBaseDao{
 
   public List<AuctionItem> getAuctionItemBySearch(AuctionItem auctionItem,Integer pageNum);
 
+  public int getAuctionItemPageCountBySearch(AuctionItem auctionItem);
+
+  public AuctionItem getAuctionItemById(int id);
+
   public boolean changeAuctionItem(AuctionItem auctionItem);
 
   public boolean deleteAuctionItem(int id);
+
 
 }

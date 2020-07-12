@@ -8,6 +8,7 @@ public class AuctionRecord {
   private Date time;
   private int price;
   private int auctionItem_id;
+  private String UserName;
 
   public int getId() {
     return id;
@@ -49,6 +50,14 @@ public class AuctionRecord {
     this.auctionItem_id = auctionItem_id;
   }
 
+  public String getUserName() {
+    return UserName;
+  }
+
+  public void setUserName(String userName) {
+    UserName = userName;
+  }
+
   @Override
   public String toString() {
     return "AuctionRecord{" +
@@ -57,6 +66,7 @@ public class AuctionRecord {
         ", time=" + time +
         ", price=" + price +
         ", auctionItem_id=" + auctionItem_id +
+        ", UserName='" + UserName + '\'' +
         '}';
   }
 }
