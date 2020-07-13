@@ -5,9 +5,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-<link href="../css/common.css" rel="stylesheet" type="text/css" />
-<link href="../css/style.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript" src="../js/jquery.js"></script>
+<link href="css/common.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/jquery.js"></script>
 </head>
 
 <body>
@@ -63,7 +63,7 @@
             </dd>
             <dd>
               <label>修改图片：</label>
-              <div class="lf salebd"><a href="#"><img src="../images/ad20.jpg" width="100" height="100" /></a></div>
+              <div class="lf salebd"><a href="#"><img src="images/ad20.jpg" width="100" height="100" /></a></div>
                <input name="" type="file" class="marg10" />
             </dd>
             <dd class="hegas">
