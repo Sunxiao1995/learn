@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="club.banyuan.dao.ITransactionRecordDao">
+<select id="getTransactionRecord" resultType="club.banyuan.vo.UserAndRecord">
+  select ai.name,ai.start_time,ai.end_time,ai.starting_price,ar.price as ending_price,u.userName
+from auctionItem ai inner join auctionRecord ar
+on ai.id =ar.auctionItem_id
+inner join `user` u
+on ar.userId=u.id
+where ai.state=0 order by price desc;
+</select>
+
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="club.banyuan.dao.IAuctionRecordDao">
+  <select id="getAuctionRecordByAuctionItem_id" parameterType="int" resultType="AuctionRecord">
+    select a.*,u.userName from auctionRecord a inner join user u on a.userId = u.id
+    where auctionItem_id = #{auctionItem_id} order by price desc limit 0,4
+  </select>
+
+  <select id="getHighPrice" parameterType="AuctionItem" resultType="int">
+    select max(price) from auctionRecord where auctionItem_id = #{auctionItem_id}
+  </select>
+
+  <insert id="addAuctionRecord" parameterType="AuctionRecord">
+    <selectKey keyColumn="id" keyProperty="id" resultType="int">
+      select last_insert_id();
+    </selectKey>
+    insert into auctionRecord values (null,#{userId},#{time},#{price},#{auctionItem_id})
+  </insert>
+
+</mapper>
