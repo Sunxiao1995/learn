@@ -2,9 +2,11 @@ package club.banyuan.test;
 
 import club.banyuan.dao.AddressDao;
 import club.banyuan.dao.Order_detailDao;
+import club.banyuan.dao.ProductDao;
 import club.banyuan.entity.Address;
 import club.banyuan.entity.Order;
 import club.banyuan.entity.Order_detail;
+import club.banyuan.entity.Product;
 import club.banyuan.entity.User;
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,7 +22,7 @@ import org.junit.Test;
 public class Order_detailTest {
   InputStream ins;
   SqlSession session;
-  Order_detailDao order_detailDao;
+  ProductDao product;
   @Before
   public void init() throws IOException {
     // 加载配置文件
@@ -33,7 +35,7 @@ public class Order_detailTest {
     session = sqlSessionFactory.openSession();
     // 获取接口的实现类对象
     // 动态代理设计模式，获取接口的实现类对象
-    order_detailDao = session.getMapper(Order_detailDao.class);
+    product = session.getMapper(ProductDao.class);
   }
 
   @After
@@ -43,23 +45,31 @@ public class Order_detailTest {
     ins.close();
   }
 
-  @Test
-  public void testGetOrder_detailByOrderId(){
-    Order order = new Order(1,null,null,null,null,null,null);
-    List<Order_detail> list = order_detailDao.getOrder_detailByOrderId(order);
-    for (Order_detail o:list) {
-      System.out.println(o);
-    }
+//  @Test
+//  public void testGetOrder_detailByOrderId(){
+//    Order order = new Order(1,null,null,null,null,null,null);
+//    List<Order_detail> list = order_detailDao.getOrder_detailByOrderId(order);
+//    for (Order_detail o:list) {
+//      System.out.println(o);
+//    }
+//  }
+
+//  @Test
+//  public void testSaveOrder_detail(){
+//    Order_detail order_detail = new Order_detail(null,12,744,1,355.0);
+//    int i =  order_detailDao.saveOrder_detail(order_detail);
+//    System.out.println(i);
+//    System.out.println(order_detail);
+//  }
+@Test
+public void testSql2(){
+  List<Product> list = product.getProductByKeyword("%华为%");
+
+  for (Product product1 : list) {
+    System.out.println(product1);
   }
 
-  @Test
-  public void testSaveOrder_detail(){
-    Order_detail order_detail = new Order_detail(null,12,744,1,355.0);
-    int i =  order_detailDao.saveOrder_detail(order_detail);
-    System.out.println(i);
-    System.out.println(order_detail);
-  }
-
+}
 
 
 }
