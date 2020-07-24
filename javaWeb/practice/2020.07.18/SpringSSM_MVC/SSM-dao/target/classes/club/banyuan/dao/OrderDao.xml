@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="club.banyuan.dao.OrderDao">
+  <select id="getOrderByLoginName" parameterType="User" resultType="Order">
+    select * from shopping.order where loginName = #{loginName};
+  </select>
+
+  <insert id="saveOrder" parameterType="Order">
+    <selectKey keyColumn="id" keyProperty="id" resultType="int">
+      select last_insert_id();
+    </selectKey>
+    insert into shopping.order values (null,#{userId},#{loginName},#{userAddress},#{createTime},#{cost},#{serialNumber})
+  </insert>
+
+</mapper>

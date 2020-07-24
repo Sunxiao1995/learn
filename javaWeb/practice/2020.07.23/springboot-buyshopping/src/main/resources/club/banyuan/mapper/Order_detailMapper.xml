@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="club.banyuan.mapper.Order_detailMapper">
+<!--  resultType为Order_detail也可 这里仅测试-->
+  <select id="getOrder_detailByOrderId" parameterType="Order" resultMap="Order_detailMap">
+     select * from order_detail where orderId = #{id};
+  </select>
+
+
+  <insert id="saveOrder_detail" parameterType="Order_detail">
+    <selectKey keyColumn="id" keyProperty="id" resultType="int">
+      select last_insert_id();
+    </selectKey>
+    insert into order_detail values (null,#{orderId},#{productId},#{quantity},#{cost})
+  </insert>
+
+
+  <resultMap id="Order_detailMap" type="Order_detail">
+    <id column="id" property="id"/>
+    <result column="orderId" property="orderId"/>
+    <result column="productId" property="productId"/>
+    <result column="quantity" property="quantity"/>
+    <result column="cost" property="cost"/>
+
+  </resultMap>
+</mapper>

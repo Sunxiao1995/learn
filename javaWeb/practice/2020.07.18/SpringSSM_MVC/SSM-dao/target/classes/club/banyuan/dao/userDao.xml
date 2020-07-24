@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="club.banyuan.dao.userDao">
+
+  <insert id="addUser" parameterType="User">
+    <selectKey keyColumn="id" keyProperty="id" resultType="int">
+      select last_insert_id();
+    </selectKey>
+    insert into user(id,loginName,password,email,mobile) values(null,#{loginName},#{password},#{email},#{mobile})
+  </insert>
+
+  <select id="getLoginUser" parameterType="User" resultType="User">
+select * from user where loginName=#{loginName} and password=#{password}
+  </select>
+
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="club.banyuan.mapper.AddressMapper">
+  <select id="getAddressByUserId" parameterType="User" resultType="Address">
+    select * from user_address where userId = #{id} and isDefault = 1
+  </select>
+
+  <insert id="saveAddress" parameterType="Address">
+ <selectKey keyColumn="id" keyProperty="id" resultType="int">
+   select last_insert_id();
+ </selectKey>
+    insert into user_address values (null,#{userId},#{address},#{createTime},#{isDefault},#{remake})
+  </insert>
+
+</mapper>
